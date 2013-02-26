@@ -1,7 +1,9 @@
 Hackernotes::Application.routes.draw do
 
   root :to => 'home#homepage'
-  get '/search', :to => 'repositories#search'
+  get 'search', :to => 'repositories#search'
+
+  get ':owner/:name', :to => 'repositories#show_repo', :as => 'show_repo'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

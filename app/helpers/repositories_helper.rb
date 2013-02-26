@@ -1,7 +1,7 @@
 module RepositoriesHelper
 
   def title(repo)
-    link_to repo.name, user_name: repo.owner, repo_name: repo.name
+    link_to repo.name, show_repo_path(repo.owner, repo.name)
   end
 
   def description(repo)
