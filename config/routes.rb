@@ -1,4 +1,7 @@
 Hackernotes::Application.routes.draw do
+
+  root :to => 'home#homepage'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -1,0 +1,10 @@
+<h1>HACKERNOTES</h1>
+<b>{{ Hack to Create }}</b>
+
+<p><hr/><br/>
+<%= form_tag("/search", :method => "get") do %>
+  <%= label_tag(:q, "Search for you favourite Github Project") %>
+  <%= search_field_tag(:q) %>
+  <%= submit_tag("Search") %>
+<% end %>
+</p>
