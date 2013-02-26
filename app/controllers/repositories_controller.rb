@@ -5,14 +5,20 @@ class RepositoriesController < ApplicationController
     @g_repos = g[:repositories]
   end
 
-  def show
-    @repo = Repository.find params[:id]
+  def show_repo
+    owner, name = params[:owner], params[:name]
+    @repo = find(owner, name)
+    @repo = create(owner, name) if @repo.nil?
   end
 
-  def create
-    github_repo = Github.new.repos.get params[:user_name], params[:repo_name]
-    Repository.find_or_create to_hackernotes(github_repo)
-    redirect_to :show
+  private
+  def find(owner, name)
+    Repository.where(owner: owner, name: name).first
+  end
+
+  def create(owner, name)
+    g_repo = Github.new.repos.get(owner, name)
+    Repository.create to_hackernotes(g_repo)
   end
 
 end
