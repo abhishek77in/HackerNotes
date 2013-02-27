@@ -1,7 +1,7 @@
 class RepositoriesController < ApplicationController
 
   def search
-    keyword = params[:q]
+    keyword = params[:q].downcase
     @g_repos = Rails.cache.fetch(keyword, :expires_in => 1.weeks) do
       Github.new.search.repos(keyword: keyword)[:repositories]
     end
