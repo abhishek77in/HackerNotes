@@ -1,7 +1,7 @@
 class RepositoriesController < ApplicationController
 
   def search
-    keyword = params[:q].downcase
+    keyword = optimize(params[:q])
     @g_repos = Rails.cache.fetch(keyword, :expires_in => 1.weeks) do
       Github.new.search.repos(keyword: keyword)[:repositories]
     end
@@ -23,4 +23,7 @@ class RepositoriesController < ApplicationController
     Repository.create to_hackernotes(g_repo)
   end
 
+  def optimize(keyword)
+    keyword.strip.gsub(/\s*\s/,' ').downcase
+  end
 end
