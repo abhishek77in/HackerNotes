@@ -3,7 +3,8 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.12'
 gem 'mongoid', '~> 3.1.2'
 gem "thin", "~> 1.5.0"
-gem "github_api", "~> 0.9.1"
+gem "github_api", "~> 0.9"
+gem "omniauth-github", "~> 1.1"
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
