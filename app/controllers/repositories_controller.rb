@@ -9,8 +9,7 @@ class RepositoriesController < ApplicationController
 
   def show_repo
     owner, name = params[:owner], params[:name]
-    @repo = find(owner, name)
-    @repo = create(owner, name) if @repo.nil?
+    @repo = find(owner, name) || create(owner, name)
   end
 
   private
