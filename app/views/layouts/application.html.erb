@@ -9,7 +9,15 @@
 <body>
   <header>
     <h1>HACKERNOTES</h1>
-    <b>{{ Hack to Create }}</b>
+    <h2>{{ Hack to Create }}</h2>
+    <div class="login">
+      <% if current_user %>
+        Signed in as <%= current_user.name %>!
+        <%= link_to "Sign out", signout_path %>
+      <% else %>
+        <%= link_to "Sign in with Github", "/auth/github" %>
+      <% end %>
+    </div>
     <hr/>
   </header>
   
