@@ -5,6 +5,10 @@ Hackernotes::Application.routes.draw do
 
   get ':owner/:name', :to => 'repositories#show_repo', :as => 'show_repo'
 
+  match '/auth/github/callback' => 'sessions#create', :as => :signin
+  match '/signout' => 'sessions#destroy', :as => :signout
+  match 'auth/failure', to: redirect('/')
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
