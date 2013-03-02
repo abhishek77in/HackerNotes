@@ -1,1 +1,5 @@
-<%= @repo.to_yaml %>
+<h2>Project Details:</h2>
+<% @repo.attributes.keys.each do |attr| %>
+  <li><b><%= attr.capitalize %>:</b> <%= @repo[attr] %></li>
+<% end %>
+<hr/>
