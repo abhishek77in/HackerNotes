@@ -11,3 +11,18 @@
  *= require_self
  *= require_tree .
  */
+
+.login {
+  text-align: right;
+  margin-right: 40px;
+}
+
+header {
+  h2 {
+    font-size: 14px;
+  }
+  h1, h2 {
+    display: inline;
+  }
+}
+
