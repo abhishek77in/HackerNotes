@@ -1,7 +1,7 @@
 <h2><%= @repo.name.capitalize %></h2>
 <p><%= @repo.description %></p>
 <hr/>
-
+<%= render "shared/notes" %>
 <% @blogs.each do |b| %>
   <p>
   <%= link_to b.title, b.url %><br/><%= b.excerpt %>
