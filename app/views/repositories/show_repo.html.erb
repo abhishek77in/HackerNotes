@@ -2,5 +2,4 @@
 <p><%= @repo.description %></p>
 <hr/>
 <%= render "shared/notes_header" %>
-<%= render "shared/blogs" %>
-<hr/>
+<%= render "shared/blogs", blogs: @blogs %>
