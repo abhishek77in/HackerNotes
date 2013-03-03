@@ -1,6 +1,6 @@
 <%= form_tag("/search", :method => "get") do %>
   <%= label_tag(:q, "Search for your favourite Github Project") %>
-  <%= search_field_tag(:q) %>
+  <%= search_field_tag(:q, nil, autofocus: true) %>
   <%= submit_tag("Search") %>
 <% end %>
 
