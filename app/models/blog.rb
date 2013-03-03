@@ -8,5 +8,7 @@ class Blog
   validates :excerpt, presence: true
   validates :url, presence: true, uniqueness: true, format: URI::regexp(%w(http https))
 
+  default_scope limit(10)
+
   embedded_in :repository
 end
