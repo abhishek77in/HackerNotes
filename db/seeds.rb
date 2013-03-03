@@ -1,7 +1,12 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+def new_blog_attributes
+  { title: Faker::Lorem.words,
+    excerpt: Faker::Lorem.paragraph,
+    url: Faker::Internet.url }
+end
+
+Repository.all.each do |r|
+  10.times do
+    r.blogs.create(new_blog_attributes)
+  end
+end
+
