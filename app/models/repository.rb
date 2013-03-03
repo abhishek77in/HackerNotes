@@ -7,4 +7,5 @@ class Repository
   field :watchers, type: Integer
   field :forks, type: Integer
 
+  embeds_many :blogs
 end
