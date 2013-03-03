@@ -2,10 +2,10 @@
 <p><%= @repo.description %></p>
 <hr/>
 <%= render "shared/notes_header" %>
-<%= render "shared/subs_services", subs_services: @subs_services %>
-<%= render "shared/blogs", blogs: @blogs %>
-<%= render "shared/tips", tips: @tips %>
-<%= render "shared/slides", slides: @slides %>
-<%= render "shared/qnas", qnas: @qnas %>
-<%= render "shared/noteworthies", noteworthies: @noteworthies %>
-<%= render "shared/screencasts", screencasts: @screencasts %>
+<%= render "shared/subs_services", subs_services: @subs_services unless @subs_services.blank? %>
+<%= render "shared/blogs", blogs: @blogs unless @blogs.blank? %>
+<%= render "shared/tips", tips: @tips unless @tips.blank? %>
+<%= render "shared/slides", slides: @slides unless @slides.blank? %>
+<%= render "shared/qnas", qnas: @qnas unless @qnas.blank? %>
+<%= render "shared/noteworthies", noteworthies: @noteworthies unless @noteworthies.blank? %>
+<%= render "shared/screencasts", screencasts: @screencasts unless @screencasts.blank? %>
