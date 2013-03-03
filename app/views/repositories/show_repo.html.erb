@@ -2,4 +2,10 @@
 <p><%= @repo.description %></p>
 <hr/>
 <%= render "shared/notes_header" %>
+<%= render "shared/subs_services", subs_services: @subs_services %>
 <%= render "shared/blogs", blogs: @blogs %>
+<%= render "shared/tips", tips: @tips %>
+<%= render "shared/slides", slides: @slides %>
+<%= render "shared/qnas", qnas: @qnas %>
+<%= render "shared/noteworthies", noteworthies: @noteworthies %>
+<%= render "shared/screencasts", screencasts: @screencasts %>
