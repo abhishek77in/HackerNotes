@@ -11,13 +11,11 @@ def subs_service_attributes
 end
 
 Repository.all.each do |r|
-  10.times do
-    r.subscription_services.create(subs_service_attributes)
-    r.blogs.create(title_excerpt_url)
-    r.tips.create(title_excerpt_url)
-    r.slides.create(title_excerpt_url)
-    r.qnas.create(title_excerpt_url)
-    r.screencasts.create(title_excerpt_url)
-    r.noteworthies.create(title_excerpt_url)
-  end
+  r.subscription_services.create(subs_service_attributes)
+  r.blogs.create(title_excerpt_url)
+  r.tips.create(title_excerpt_url)
+  r.slides.create(title_excerpt_url)
+  r.qnas.create(title_excerpt_url)
+  r.screencasts.create(title_excerpt_url)
+  r.noteworthies.create(title_excerpt_url)
 end
