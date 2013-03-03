@@ -5,6 +5,7 @@ gem 'mongoid', '~> 3.1.2'
 gem "thin", "~> 1.5.0"
 gem "github_api", "~> 0.9"
 gem "omniauth-github", "~> 1.1"
+gem "faker", "~> 1.1.2"
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
