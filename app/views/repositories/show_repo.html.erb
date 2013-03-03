@@ -1,5 +1,10 @@
-<h2>Project Details:</h2>
-<% @repo.attributes.keys.each do |attr| %>
-  <li><b><%= attr.capitalize %>:</b> <%= @repo[attr] %></li>
-<% end %>
+<h2><%= @repo.name.capitalize %></h2>
+<p><%= @repo.description %></p>
 <hr/>
+
+<% @blogs.each do |b| %>
+  <p>
+  <%= link_to b.title, b.url %><br/><%= b.excerpt %>
+  </p>
+<% end %>
+
