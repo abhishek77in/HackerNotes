@@ -1,0 +1,7 @@
+<% @blogs.each do |b| %>
+  <p>
+  <%= link_to b.title, b.url %><br/><%= b.excerpt %>
+  </p>
+<% end %>
+<hr/>
+
