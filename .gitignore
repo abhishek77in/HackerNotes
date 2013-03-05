@@ -16,3 +16,4 @@
 *.swp
 /bin
 /temp
+.DS_Store
