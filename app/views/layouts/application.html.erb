@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Hackernotes</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>TheHackerNotes</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
 </head>
 <body>
+<div id="page">
+  <div id="main-content">
   <header>
-    <h1>HACKERNOTES</h1>
-    <h2>{{ Hack to Create }}</h2>
+    <h1>THEHACKERNOTES</h1>
     <%= render "shared/login" %><hr/>
   </header>
   
   <%= yield %>
 
+  </div>
+</div>
 </body>
 </html>
