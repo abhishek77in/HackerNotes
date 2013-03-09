@@ -5,7 +5,7 @@ module RepositoriesHelper
   end
 
   def description(repo)
-    "Watchers: <b>#{repo.watchers}</b><br/>#{repo.description}<br/>Created by: <b>#{repo.owner}</b>".html_safe
+    "#{repo.description}<br/>Created by: <b>#{repo.owner}</b>".html_safe
   end
 
 end
