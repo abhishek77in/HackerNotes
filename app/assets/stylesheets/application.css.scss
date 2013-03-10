@@ -9,20 +9,10 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require_tree .
+ *= require_directory .
  */
 
 .login {
   text-align: right;
   margin-right: 40px;
 }
-
-header {
-  h2 {
-    font-size: 14px;
-  }
-  h1, h2 {
-    display: inline;
-  }
-}
-

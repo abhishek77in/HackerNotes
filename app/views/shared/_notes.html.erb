@@ -1,0 +1,55 @@
+<section id="blogs" class="clearfix">
+<h2>Blogs</h2>
+<% @blogs.each do |b| %>
+  <p><%= link_to b.title, b.url %><br/><%= b.excerpt %></p>
+<% end %>
+<hr/>
+</section>
+
+<section id="subscribe" class="clearfix">
+<h2>Subscribe</h2>
+<% @subs_services.each do |s| %>
+  <p><%= link_to s.title, s.url %><br/><%= s.description %></p>
+<% end %>
+<hr/>
+</section>
+
+<section id="tips" class="clearfix">
+<h2>Tips n Tricks</h2>
+<% @tips.each do |t| %>
+  <p><%= link_to t.title, t.url %><br/><%= t.excerpt %></p>
+<% end %>
+<hr/>
+</section>
+
+<section id="slides" class="clearfix">
+<h2>Slides</h2>
+<% @slides.each do |s| %>
+  <p><%= link_to s.title, s.url %><br/><%= s.excerpt %></p>
+<% end %>
+<hr/>
+</section>
+
+<section id="qna" class="clearfix">
+<h2>Q 'n' A</h2>
+<% @qnas.each do |q| %>
+  <p><%= link_to q.title, q.url %><br/><%= q.excerpt %></p>
+<% end %>
+<hr/>
+</section>
+
+<section id="screencasts" class="clearfix">
+<h2>Screencasts</h2>
+<% @screencasts.each do |s| %>
+  <p><%= link_to s.title, s.url %><br/><%= s.excerpt %></p>
+<% end %>
+<hr/>
+</section>
+
+<section id="noteworthy" class="clearfix">
+<h2>Noteworthy</h2>
+<% @noteworthies.each do |n| %>
+  <p><%= link_to n.title, n.url %><br/><%= n.excerpt %></p>
+<% end %>
+<hr/>
+</section>
