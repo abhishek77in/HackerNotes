@@ -3,7 +3,7 @@
 <% end %>
 
 <% content_for :sidebar do %>
-  <%= render "shared/sidebar" %>
+  <%= render "shared/sidebar", repo: @repo %>
 <% end %>
 
 <h2><%= @repo.name.capitalize %></h2>
