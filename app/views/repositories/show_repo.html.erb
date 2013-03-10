@@ -1,3 +1,7 @@
+<% content_for :head do %>
+  <%= stylesheet_link_tag "repo/repositories"  %>
+<% end %>
+
 <h2><%= @repo.name.capitalize %></h2>
 <p><%= @repo.description %></p>
 <hr/>
