@@ -2,10 +2,13 @@
   <%= stylesheet_link_tag "repo/repositories"  %>
 <% end %>
 
+<% content_for :sidebar do %>
+  <%= render "shared/sidebar" %>
+<% end %>
+
 <h2><%= @repo.name.capitalize %></h2>
 <p><%= @repo.description %></p>
 <hr/>
-<%= render "shared/notes_header" %>
 <%= render "shared/subs_services", subs_services: @subs_services unless @subs_services.blank? %>
 <%= render "shared/blogs", blogs: @blogs unless @blogs.blank? %>
 <%= render "shared/tips", tips: @tips unless @tips.blank? %>
