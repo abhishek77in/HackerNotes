@@ -8,6 +8,8 @@ class User
   field :image, type: String
   attr_accessible :provider, :uid, :name, :email, :nickname, :image
 
+  has_many :votes
+
   # run 'rake db:mongoid:create_indexes' to create indexes
   index({ email: 1 }, { unique: true, background: true })
 

@@ -1,5 +1,6 @@
 class Blog
   include Mongoid::Document
+  include Votable
   field :title, type: String
   field :excerpt, type: String
   field :url, type: String
