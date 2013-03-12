@@ -1,4 +1,4 @@
-class BlogService
+class GoogleBlog
   attr_accessor :title, :url, :excerpt
 
   def initialize(site)
@@ -16,7 +16,7 @@ class BlogService
   def self.fetch(keyword)
     blogs = Array.new
     Google::Search::Blog.new(:query => keyword).each do |site|
-      blogs << BlogService.new(site)
+      blogs << GoogleBlog.new(site)
     end
     blogs
   end

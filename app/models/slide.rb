@@ -2,6 +2,7 @@ class Slide
   include Mongoid::Document
   field :title, type: String
   field :excerpt, type: String
+  field :image, type: String
   field :url, type: String
 
   validates :title, presence: true
