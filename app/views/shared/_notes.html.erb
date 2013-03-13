@@ -1,3 +1,10 @@
+<section id='tweeters' class="clearfix">
+<% @tweeters.each do |t| %>
+  <%= link_to(image_tag(t.image), t.url) %>
+<% end %>
+<hr/>
+</section>
+
 <section id="blogs" class="clearfix">
 <h2>Blogs</h2>
 <% @blogs.each do |b| %>

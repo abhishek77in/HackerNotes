@@ -6,6 +6,7 @@ class RepositoriesController < ApplicationController
 
   def show_repo
     @repo = GithubService.new.fetch(params[:owner], params[:name])
+    @tweeters = @repo.tweeters.all
     @subs_services = @repo.subscription_services.all
     @blogs = @repo.blogs.all
     @tips = @repo.tips.all

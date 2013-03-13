@@ -12,6 +12,7 @@ class Repository
   def create_from_service
     create_blogs_from_service
     create_slides_from_service
+    create_tweeters_from_service
   end
 
   def create_slides_from_service
@@ -31,6 +32,14 @@ class Repository
     end
   end
 
+  def create_tweeters_from_service
+    keyword = self.name.gsub(/_|-/,' ')
+    TweeterService.fetch(keyword).each do |t|
+      self.tweeters.create(t.attributes)
+    end
+  end
+
+  embeds_many :tweeters
   embeds_many :subscription_services
   embeds_many :blogs
   embeds_many :tips
