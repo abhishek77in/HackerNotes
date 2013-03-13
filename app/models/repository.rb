@@ -15,14 +15,17 @@ class Repository
   end
 
   def create_slides_from_service
-    slides = SpeakerDeck.fetch(self.name)
+    keyword = self.name.gsub(/_|-/,' ')
+    slides = SpeakerDeck.fetch(keyword)
     slides.each do |slide|
       self.slides.create(slide.attributes)
     end
   end
 
   def create_blogs_from_service
-    blogs = GoogleBlog.fetch(self.name)
+    keyword = self.name.to_a + self.description.split(' ').take(8)
+    keyword = keyword.join(' ')
+    blogs = GoogleBlog.fetch(keyword)
     blogs.each do |blog|
       self.blogs.create(blog.attributes)
     end
