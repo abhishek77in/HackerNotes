@@ -29,7 +29,7 @@
 <h2>Slides</h2>
 <% @slides.each do |s| %>
   <p><%= link_to s.title, s.url %><br/>
-  <%= image_tag s.image %><br/>
+  <%= link_to(image_tag(s.image), s.url)%><br/>
   <%= s.excerpt %></p>
 <% end %>
 <hr/>
