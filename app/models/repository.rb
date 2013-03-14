@@ -14,6 +14,14 @@ class Repository
     create_slides_from_service
     create_tweeters_from_service
     create_noteworthies_from_service
+    create_qnas_from_service
+  end
+
+  def create_qnas_from_service
+    resources = Stackoverflow.fetch(self.name)
+    resources.each do |resource|
+      self.qnas.create(resource.attributes)
+    end
   end
 
   def create_noteworthies_from_service
