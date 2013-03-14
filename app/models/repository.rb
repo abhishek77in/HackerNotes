@@ -13,6 +13,16 @@ class Repository
     create_blogs_from_service
     create_slides_from_service
     create_tweeters_from_service
+    create_noteworthies_from_service
+  end
+
+  def create_noteworthies_from_service
+    keyword = self.name.to_a + self.description.split(' ').take(8)
+    keyword = keyword.join(' ')
+    resources = GoogleWeb.fetch(keyword)
+    resources.each do |resource|
+      self.noteworthies.create(resource.attributes)
+    end
   end
 
   def create_slides_from_service
