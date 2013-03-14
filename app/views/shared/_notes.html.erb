@@ -42,7 +42,7 @@
 <hr/>
 </section>
 
-<section id="qna" class="clearfix">
+<section id="qnas" class="clearfix">
 <h2>Q 'n' A</h2>
 <% @qnas.each do |q| %>
   <p><%= link_to q.title, q.url %><br/><%= q.excerpt %></p>
@@ -58,10 +58,18 @@
 <hr/>
 </section>
 
-<section id="noteworthy" class="clearfix">
+<section id="noteworthies" class="clearfix">
 <h2>Noteworthy</h2>
 <% @noteworthies.each do |n| %>
   <p><%= link_to n.title, n.url %><br/><%= n.excerpt %></p>
+<% end %>
+<hr/>
+</section>
+
+<section id="videos" class="clearfix">
+<h2>Videos</h2>
+<% @videos.each do |v| %>
+  <p><%= link_to v.title, v.url %><br/><%= v.excerpt %></p>
 <% end %>
 <hr/>
 </section>

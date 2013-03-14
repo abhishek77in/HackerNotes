@@ -15,6 +15,16 @@ class Repository
     create_tweeters_from_service
     create_noteworthies_from_service
     create_qnas_from_service
+    create_videos_from_service
+  end
+
+  def create_videos_from_service
+    keyword = self.name.to_a + self.description.split(' ').take(8)
+    keyword = keyword.join(' ')
+    resources = GoogleVideo.fetch(keyword)
+    resources.each do |resource|
+      self.videos.create(resource.attributes)
+    end
   end
 
   def create_qnas_from_service
@@ -57,6 +67,7 @@ class Repository
     end
   end
 
+  embeds_many :videos
   embeds_many :tweeters
   embeds_many :subscription_services
   embeds_many :blogs
