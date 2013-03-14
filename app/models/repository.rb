@@ -11,12 +11,14 @@ class Repository
   after_create :create_from_service
 
   def create_from_service
-    create_blogs
-    create_slides
-    create_tweeters
-    create_noteworthies
-    create_qnas
-    create_videos
+    [ 
+      Thread.new { create_blogs },
+      Thread.new { create_slides },
+      Thread.new { create_tweeters },
+      Thread.new { create_noteworthies },
+      Thread.new { create_qnas },
+      Thread.new { create_videos }
+    ].map(&:join)
   end
 
   embeds_many :videos

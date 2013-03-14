@@ -1,6 +1,6 @@
 module Jimmy
   def create_videos
-    keyword = self.name.to_a + self.description.split(' ').take(8)
+    keyword = self.name.to_a + self.description.split(' ').take(4)
     keyword = keyword.join(' ')
     resources = GoogleVideo.fetch(keyword)
     resources.each do |resource|
