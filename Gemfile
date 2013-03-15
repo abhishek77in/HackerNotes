@@ -8,6 +8,7 @@ gem "omniauth-github", "~> 1.1.0"
 gem "faker", "~> 1.1.2"
 gem "mechanize", "~> 2.5.1"
 gem "google-search", "~> 1.0.3"
+gem "better_errors", "~> 0.7.2"
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
