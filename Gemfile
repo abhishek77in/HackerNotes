@@ -4,7 +4,7 @@ gem 'rails', '3.2.12'
 gem 'mongoid', '~> 3.1.2'
 gem "thin", "~> 1.5.0"
 gem "github_api", "~> 0.9"
-gem "omniauth-github", "~> 1.1"
+gem "omniauth-github", "~> 1.1.0"
 gem "faker", "~> 1.1.2"
 gem "mechanize", "~> 2.5.1"
 gem "google-search", "~> 1.0.3"
