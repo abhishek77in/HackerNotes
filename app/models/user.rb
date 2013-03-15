@@ -12,11 +12,11 @@ class User
   # run 'rake db:mongoid:create_indexes' to create indexes
   index({ email: 1 }, { unique: true, background: true })
 
-  def self.from_omniauth(auth)
-    where(auth.slice("uid")).first || create_from_omniauth(auth)
+  def self.from_github(auth)
+    where(auth.slice("uid")).first || create_from_github(auth)
   end
 
-  def self.create_from_omniauth(auth)
+  def self.create_from_github(auth)
     create! do |user|
       user.uid = auth['uid']
       if auth['info']
