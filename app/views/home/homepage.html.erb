@@ -1,1 +1,7 @@
 <p><%= render "shared/search_form" %></p>
+<p>Recently visited repositories</p>
+<ul class="repo-list">
+  <% @repos.each do |r| %>
+    <li><%= link_to r.name, show_repo_path(owner: r.owner, name: r.name) %></li> 
+  <% end %>
+</ul>
