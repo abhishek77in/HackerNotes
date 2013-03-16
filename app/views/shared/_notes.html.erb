@@ -43,7 +43,7 @@
 </section>
 
 <section id="qnas" class="clearfix">
-<h2>Q 'n' A</h2>
+<h2>FAQs</h2>
 <% @qnas.each do |q| %>
   <p><%= link_to q.title, q.url %><br/><%= q.excerpt %></p>
 <% end %>
