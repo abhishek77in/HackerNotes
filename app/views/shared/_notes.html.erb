@@ -35,7 +35,8 @@
 <section id="slides" class="clearfix">
 <h2>Slides</h2>
 <% @slides.each do |s| %>
-  <p><%= link_to s.title, s.url, class: 'embed' %><br/>
+  <p><%= link_to s.title, s.url %><br/>
+  <%= image_tag s.image %><br/>
   <%= s.excerpt %></p>
 <% end %>
 <hr/>
