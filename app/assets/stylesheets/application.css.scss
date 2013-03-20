@@ -13,9 +13,13 @@
  *= require_directory ../../../vendor/assets/stylesheets/
  */
 
+header h1 {
+  display: inline;
+}
+
 .login {
-  text-align: right;
-  margin-right: 40px;
+  float: right;
+  margin-top: 15px;
 }
 
 .repo-list {
