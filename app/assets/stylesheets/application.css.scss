@@ -25,3 +25,12 @@ header h1 {
 .repo-list {
   font-size: 18px;
 }
+
+.vote {
+  display: inline;
+  float: left;
+  img {
+    height: 25px;
+    width: 25px;
+  }
+}
