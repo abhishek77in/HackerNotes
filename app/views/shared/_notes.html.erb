@@ -8,11 +8,7 @@
 <section id="blogs" class="clearfix">
 <h2>Blogs</h2>
 <% @blogs.each do |b| %>
-    <div class="vote">
-      <%= image_tag "vote_up.png" %><br/>
-      <%= image_tag "vote_down.png" %>
-    </div>
-    <p><%= link_to b.title, b.url %><br/><%= b.excerpt %></p>
+  <p><%= link_to b.title, b.url %><br/><%= b.excerpt %></p>
 <% end %>
 <hr/>
 </section>
