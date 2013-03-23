@@ -32,9 +32,6 @@ GEM
     better_errors (0.7.2)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
-    bson (1.8.3)
-    bson_ext (1.8.3)
-      bson (~> 1.8.3)
     builder (3.0.4)
     coderay (1.0.9)
     coffee-rails (3.2.2)
@@ -174,8 +171,6 @@ PLATFORMS
 
 DEPENDENCIES
   better_errors (~> 0.7.2)
-  bson (~> 1.8.3)
-  bson_ext (~> 1.8.3)
   coffee-rails (~> 3.2.1)
   faker (~> 1.1.2)
   github_api (~> 0.9)
