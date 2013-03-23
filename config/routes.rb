@@ -7,5 +7,7 @@ Hackernotes::Application.routes.draw do
   match '/signout' => 'sessions#destroy', :as => :signout
   match 'auth/failure', to: redirect('/')
 
+  post '/create_note' => 'repositories#create_note'
+
   get ':owner/:name', :to => 'repositories#show_repo', :as => 'show_repo'
 end
