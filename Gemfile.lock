@@ -32,6 +32,8 @@ GEM
     better_errors (0.7.2)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
+    binding_of_caller (0.7.1)
+      debug_inspector (>= 0.0.1)
     builder (3.0.4)
     coderay (1.0.9)
     coffee-rails (3.2.2)
@@ -42,6 +44,7 @@ GEM
       execjs
     coffee-script-source (1.5.0)
     daemons (1.1.9)
+    debug_inspector (0.0.2)
     domain_name (0.5.7)
       unf (~> 0.0.3)
     erubis (2.7.0)
@@ -173,6 +176,7 @@ PLATFORMS
 
 DEPENDENCIES
   better_errors (~> 0.7.2)
+  binding_of_caller (~> 0.7.1)
   coffee-rails (~> 3.2.1)
   faker (~> 1.1.2)
   github_api (~> 0.9)
