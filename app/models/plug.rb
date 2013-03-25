@@ -26,8 +26,7 @@ module Plug
   end
 
   def fetch_attributes
-    embedly_api = Embedly::API.new(user_agent: 'Mozilla/5.0 (compatible; mytestapp/1.0; my@email.com)', key: ENV['EMBEDLY_API_KEY'])
-    embedly_obj = embedly_api.oembed(url: self.url).first
+    embedly_obj = EmbedlyService.new(self.url)
     self.set_attributes(embedly_obj) unless embedly_obj.nil?
   end
 
