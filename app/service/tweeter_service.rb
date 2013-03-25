@@ -1,5 +1,5 @@
 class TweeterService
-  attr_accessor :title, :url, :excerpt, :image
+  attr_accessor :title, :url, :description, :image
 
   REQ_URL = "https://twitter.com/search/users?q="
   BASE_URL = "https://twitter.com"
@@ -7,20 +7,20 @@ class TweeterService
   TWEETER = ".stream-item"
   TITLE = ".fullname"
   URL = "a"
-  EXCERPT = ".bio"
+  DESCRIPTION = ".bio"
   IMAGE = "img"
 
   def initialize(tweeter)
     @title = tweeter.search(TITLE).text
     @url = BASE_URL + tweeter.search(URL).first["href"]
-    @excerpt = tweeter.search(EXCERPT).text
+    @description = tweeter.search(DESCRIPTION).text
     @image = tweeter.search(IMAGE).first["src"]
   end
 
   def attributes
     { title: title,
       url: url,
-      excerpt: excerpt,
+      description: description,
       image: image }
   end
 

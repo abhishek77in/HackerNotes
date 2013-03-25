@@ -1,16 +1,16 @@
 class GoogleVideo
-  attr_accessor :title, :url, :excerpt
+  attr_accessor :title, :url, :description
 
   def initialize(site)
     @title = site.title
     @url = site.uri
-    @excerpt = strip_tags site.content
+    @description = strip_tags site.content
   end
 
   def attributes
     { title: title,
       url: url,
-      excerpt: excerpt }
+      description: description }
   end
 
   def self.fetch(keyword)

@@ -1,5 +1,5 @@
 class Stackoverflow
-  attr_accessor :title, :url, :excerpt
+  attr_accessor :title, :url, :description
 
   REQ_URL = "http://stackoverflow.com/search?tab=votes&q="
   BASE_URL = "http://stackoverflow.com"
@@ -7,18 +7,18 @@ class Stackoverflow
   QA = ".search-result"
   TITLE = ".result-link span"
   URL = ".result-link span a"
-  EXCERPT = ".excerpt"
+  DESCRIPTION = ".description"
 
   def initialize(qa)
     @title = qa.search(TITLE).text
     @url = BASE_URL + qa.search(URL).first["href"]
-    @excerpt = qa.search(EXCERPT).text
+    @description = qa.search(DESCRIPTION).text
   end
 
   def attributes
     { title: title,
       url: url,
-      excerpt: excerpt }
+      description: description }
   end
 
   def self.fetch(keyword)
