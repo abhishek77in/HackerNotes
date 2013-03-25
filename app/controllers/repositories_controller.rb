@@ -23,7 +23,7 @@ class RepositoriesController < ApplicationController
     note = @repo.send(resource).new(url: params[:url], user: current_user)
     if note.save!
       flash[:notice] = "#{resource} created!"
-      redirect_to action: show_repo, owner: @repo.owner, name: @repo.name
+      redirect_to show_repo_path({ owner: @repo.owner, name: @repo.name })
     else
       flash[:alert] = "Please resolve following errors and retry"
       render :show_repo

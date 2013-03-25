@@ -16,8 +16,8 @@ module Plug
 
 
     belongs_to :user
-    validates :title, presence: true
-    validates :description, presence: true
+    # validates :title, presence: true, on: :create
+    # validates :description, presence: true, on: :create
     validates :url, presence: true, uniqueness: true, format: URI::regexp(%w(http https))
 
     default_scope limit(10)
