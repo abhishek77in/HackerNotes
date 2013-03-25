@@ -26,18 +26,18 @@ module Plug
   end
 
   def fetch_attributes
-    embedly_api = Embedly::API.new(user_agent: 'Mozilla/5.0 (compatible; mytestapp/1.0; my@email.com)')
+    embedly_api = Embedly::API.new(user_agent: 'Mozilla/5.0 (compatible; mytestapp/1.0; my@email.com)', key: ENV['EMBEDLY_API_KEY'])
     embedly_obj = embedly_api.oembed(url: self.url).first
     self.set_attributes(embedly_obj) unless embedly_obj.nil?
   end
 
   def set_attributes(embedly_obj)
     self.common_attributes(embedly_obj).each do |attr|
-      self.attr = embedly_obj.attr if embedly_obj.attr
+      self[attr] = embedly_obj[attr] if embedly_obj[attr]
     end
   end
 
   def common_attributes(embedly_obj)
-    self.attributes_names.map(&:to_sym) & embedly_obj.marshal_dump.keys
+    self.attribute_names.map(&:to_sym) & embedly_obj.marshal_dump.keys
   end
 end
