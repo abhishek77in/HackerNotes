@@ -1,5 +1,6 @@
 module Plug
   extend ActiveSupport::Concern
+  include EmbedlyService
 
   included do
     include Mongoid::Document
@@ -25,18 +26,4 @@ module Plug
     embedded_in :repository
   end
 
-  def fetch_attributes
-    embedly_obj = EmbedlyService.new(self.url)
-    self.set_attributes(embedly_obj) unless embedly_obj.nil?
-  end
-
-  def set_attributes(embedly_obj)
-    self.common_attributes(embedly_obj).each do |attr|
-      self[attr] = embedly_obj[attr] if embedly_obj[attr]
-    end
-  end
-
-  def common_attributes(embedly_obj)
-    self.attribute_names.map(&:to_sym) & embedly_obj.marshal_dump.keys
-  end
 end
