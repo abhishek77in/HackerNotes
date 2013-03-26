@@ -17,6 +17,7 @@ module Plug
 
 
     belongs_to :user
+    validates_presence_of :user
     # validates :title, presence: true, on: :create
     # validates :description, presence: true, on: :create
     validates :url, presence: true, uniqueness: true, format: URI::regexp(%w(http https))
