@@ -5,4 +5,7 @@
   <% else %>
     <%= link_to "Sign in with Github", "/auth/github", class: "btn-auth btn-github" %>
   <% end %>
+  <br/>
+  <br/>
+  <%= mail_to('jimmy@thehackernotes.com', '----> Give your valueable feedback <----', {encode: 'javascript', subject: 'feedback', cc: 'abhishek77in@gmail.com', body: "You can do better!\n\nHere is how?"}) %>
 </div>
