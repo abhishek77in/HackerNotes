@@ -1,5 +1,4 @@
 class Repository
-
   include Mongoid::Document
   include Jimmy
   field :name, type: String

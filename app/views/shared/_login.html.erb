@@ -1,6 +1,6 @@
 <div class="login">
   <% if current_user %>
-    Welcome <%= current_user.name.split.first %>!
+    Welcome <%= current_user.name.split.first if current_user %>!
     <%= link_to "Sign out", signout_path, class: "btn-auth btn-github"  %>
   <% else %>
     <%= link_to "Sign in with Github", "/auth/github", class: "btn-auth btn-github" %>
