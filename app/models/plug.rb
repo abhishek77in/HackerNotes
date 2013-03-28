@@ -23,7 +23,7 @@ module Plug
     validates :url, presence: true, uniqueness: true, format: URI::regexp(%w(http https))
 
     default_scope limit(10)
-    before_create :fetch_attributes
+    # after_create :fetch_attributes, :unless -> { self.repository.new_record? }
     embedded_in :repository
   end
 

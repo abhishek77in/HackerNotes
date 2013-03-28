@@ -1,13 +1,15 @@
 module Jimmy
   def jimmy
     @jimmy = User.where(nickname: 'jimmy-thehackernotes').first if @jimmy.nil?
+    @jimmy
   end
 
   def add_to_db(resources, resource_type)
+    # Optimize later 
     # resources = resources.map { |r| r.attributes.merge(user: @jimmy) }
     # self.send(resource_type).collection.insert(resources)
     resources.each do |resource|
-      self.send(resource_type).create(resource.attributes.merge(user: @jimmy))
+      self.send(resource_type).create(resource.attributes.merge(user: jimmy))
     end
   end
 
