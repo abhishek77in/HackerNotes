@@ -1,5 +1,7 @@
 class Repository
   include Mongoid::Document
+  include Mongoid::Timestamps
+
   include Jimmy
   field :name, type: String
   field :owner, type: String
