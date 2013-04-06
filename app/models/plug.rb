@@ -24,8 +24,8 @@ module Plug
     # validates :description, presence: true, on: :create
     validates :url, presence: true, uniqueness: true, format: URI::regexp(%w(http https))
 
-    default_scope limit(10)
-    before_create :fetch_attributes, unless: Proc.new { self.repository.new_record? }
+    default_scope desc(:created_at).limit(10)
+    before_create :fetch_attributes, unless: Proc.new { self.user.nickname == 'jimmy-thehackernotes' }
     embedded_in :repository
   end
 
