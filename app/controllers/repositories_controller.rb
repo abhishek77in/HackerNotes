@@ -22,7 +22,7 @@ class RepositoriesController < ApplicationController
     resource = params[:resource].to_sym
     note = @repo.send(resource).new(url: params[:url], user: current_user)
     if note.save!
-      flash[:notice] = "#{resource} created!"
+      flash[:notice] = "#{resource.to_s.singularize.capitalize} added!"
       redirect_to show_repo_path({ owner: @repo.owner, name: @repo.name })
     else
       flash[:alert] = "Please resolve following errors and retry"

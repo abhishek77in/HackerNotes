@@ -34,3 +34,17 @@ header h1 {
     width: 25px;
   }
 }
+
+.globalSuccessMessage {
+  font-size: 28px;
+  text-align: center;
+  display: block;
+  margin-bottom: 20px;
+  color: green;
+}
+
+.globalValidationMessage {
+  font-size: 18px;
+  display: block;
+  color: red;
+}
