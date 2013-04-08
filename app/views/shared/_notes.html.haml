@@ -9,23 +9,8 @@
   = render 'shared/note_form'
   %hr
 
-= render 'shared/resources', resources: @blogs, id: 'blogs'
-
--# <section id="subscribe" class="clearfix">
--# <h2>Subscribe</h2>
--# <% @subs_services.each do |s| %>
--#   <p><%= link_to s.title, s.url %><br/><%= s.description %></p>
--# <% end %>
--# <hr/>
--# </section>
-
--# <section id="tips" class="clearfix">
--# <h2>Tips n Tricks</h2>
--# <% @tips.each do |t| %>
--#   <p><%= link_to t.title, t.url %><br/><%= t.description %></p>
--# <% end %>
--# <hr/>
--# </section>
+= render 'shared/resources', resources: @blogs, id: 'blogs', title: 'Blogs'
+= render 'shared/resources', resources: @subs_services, id: 'subscribe', title: 'Subscribe'
 
 -# <section id="slides" class="clearfix">
 -# <h2>Slides</h2>
@@ -39,29 +24,10 @@
 -# <hr/>
 -# </section>
 
--# <section id="qnas" class="clearfix">
--# <h2>FAQs</h2>
--# <% @qnas.each do |q| %>
--#   <p><%= link_to q.title, q.url %><br/><%= q.description %></p>
--# <% end %>
--# <hr/>
--# </section>
-
--# <section id="screencasts" class="clearfix">
--# <h2>Screencasts</h2>
--# <% @screencasts.each do |s| %>
--#   <p><%= link_to s.title, s.url %><br/><%= s.description %></p>
--# <% end %>
--# <hr/>
--# </section>
-
--# <section id="noteworthies" class="clearfix">
--# <h2>Noteworthy</h2>
--# <% @noteworthies.each do |n| %>
--#   <p><%= link_to n.title, n.url %><br/><%= n.description %></p>
--# <% end %>
--# <hr/>
--# </section>
+= render 'shared/resources', resources: @tips, id: 'tips', title: 'Tips n Tricks'
+= render 'shared/resources', resources: @qnas, id: 'qnas', title: 'FAQs'
+= render 'shared/resources', resources: @screencasts, id: 'screencasts', title: 'Screencasts'
+= render 'shared/resources', resources: @noteworthies, id: 'noteworthies', title: 'Noteworthy'
 
 -# <section id="videos" class="clearfix">
 -# <h2>Videos</h2>
