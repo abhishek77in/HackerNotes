@@ -1,0 +1,72 @@
+%section#tweeters.clearfix
+  - @tweeters.each do |t|
+    = link_to(image_tag(t.image), t.url)
+  %hr
+
+%section#note_form.clearfix
+  = global_validation_message
+  = global_success_message
+  = render 'shared/note_form'
+  %hr
+
+= render 'shared/resources', resources: @blogs, id: 'blogs'
+
+-# <section id="subscribe" class="clearfix">
+-# <h2>Subscribe</h2>
+-# <% @subs_services.each do |s| %>
+-#   <p><%= link_to s.title, s.url %><br/><%= s.description %></p>
+-# <% end %>
+-# <hr/>
+-# </section>
+
+-# <section id="tips" class="clearfix">
+-# <h2>Tips n Tricks</h2>
+-# <% @tips.each do |t| %>
+-#   <p><%= link_to t.title, t.url %><br/><%= t.description %></p>
+-# <% end %>
+-# <hr/>
+-# </section>
+
+-# <section id="slides" class="clearfix">
+-# <h2>Slides</h2>
+-# <% @slides.each do |s| %>
+-#   <div class="box">
+-#     <p><%= link_to s.title, s.url %><br/>
+-#     <%= image_tag s.image %><br/>
+-#     <%= s.description %></p>
+-#   </div>
+-# <% end %>
+-# <hr/>
+-# </section>
+
+-# <section id="qnas" class="clearfix">
+-# <h2>FAQs</h2>
+-# <% @qnas.each do |q| %>
+-#   <p><%= link_to q.title, q.url %><br/><%= q.description %></p>
+-# <% end %>
+-# <hr/>
+-# </section>
+
+-# <section id="screencasts" class="clearfix">
+-# <h2>Screencasts</h2>
+-# <% @screencasts.each do |s| %>
+-#   <p><%= link_to s.title, s.url %><br/><%= s.description %></p>
+-# <% end %>
+-# <hr/>
+-# </section>
+
+-# <section id="noteworthies" class="clearfix">
+-# <h2>Noteworthy</h2>
+-# <% @noteworthies.each do |n| %>
+-#   <p><%= link_to n.title, n.url %><br/><%= n.description %></p>
+-# <% end %>
+-# <hr/>
+-# </section>
+
+-# <section id="videos" class="clearfix">
+-# <h2>Videos</h2>
+-# <% @videos.each do |v| %>
+-#   <p><%= link_to v.title, v.url %><br/><%= v.description %></p>
+-# <% end %>
+-# <hr/>
+-# </section>

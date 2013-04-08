@@ -1,0 +1,8 @@
+%section.clearfix
+  %h2= id.capitalize
+  - resources.each do |r|
+    %p
+      = link_to(r.title, r.url)
+      %br
+      = r.description
+  %hr
