@@ -1,25 +1,15 @@
+- notes = [ { anchor: '#blogs', title: 'blogs', class: 'active' },
+            { anchor: '#subscribe', title: 'subscribe' },
+            { anchor: '#tips', title: "Tips 'n' Tricks" },
+            { anchor: '#slides', title: 'Slides' },
+            { anchor: '#qnas', title: 'FAQs' } ]
 %aside#sidebar
   %nav
     %a.logo#nav-logo{href: '#top'}
       %span TheHackerNotes
       = repo.name
     %ul
-      %li.active
-        %a{href: '#blogs'} blogs
+      - notes.each do |n|
+        %li{class: n[:class]}
+          = link_to(n[:title], n[:anchor])
     %div.bg_bottom
-
--# <aside id="sidebar">
--# <nav><a class="logo" href="#top" id="nav-logo"><span>TheHackerNotes</span><%= repo.name %></a>
--# <ul>
--#   <li class="active on" id="nav-1"><a href="#blogs">blogs</a></li>
--#   <li id="nav-2" class="off"><a href="#subscribe">subscribe</a></li>
--#   <li id="nav-3" class="off"><a href="#tips">Tips 'n' Tricks</a></li>
--#   <li id="nav-4" class="off"><a href="#slides">Slides</a></li>
--#   <li id="nav-5" class="off"><a href="#qnas">FAQs</a></li>
--#   <li id="nav-6" class="off"><a href="#screencasts">Screencasts</a></li>
--#   <li id="nav-7" class="off"><a href="#noteworthies">Noteworthies</a></li>
--#   <li id="nav-8" class="off"><a href="#videos">Videos</a></li>
--# </ul>
--# <div class="bg_bottom"></div>
--# </nav>
--# </aside>
