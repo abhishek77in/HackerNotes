@@ -1,8 +1,12 @@
-- notes = [ { anchor: '#blogs', title: 'blogs', class: 'active' },
-            { anchor: '#subscribe', title: 'subscribe' },
-            { anchor: '#tips', title: "Tips 'n' Tricks" },
-            { anchor: '#slides', title: 'Slides' },
-            { anchor: '#qnas', title: 'FAQs' } ]
+- notes = [ sidebar(@blogs, 'Blogs', 'active'),
+            sidebar(@subs_services, 'Subscribe', nil, 'subscribe'),
+            sidebar(@tips, "Tips 'n' Tricks"),
+            sidebar(@slides, 'Slides'),
+            sidebar(@qnas, 'FAQs'),
+            sidebar(@screencasts, 'Screencasts'),
+            sidebar(@videos, 'Videos'),
+            sidebar(@noteworthies, 'Noteworthy') ].compact
+
 %aside#sidebar
   %nav
     %a.logo#nav-logo{href: '#top'}
@@ -10,6 +14,6 @@
       = repo.name
     %ul
       - notes.each do |n|
-        %li{class: n[:class]}
+        %li{class: n[:css_class]}
           = link_to(n[:title], n[:anchor])
     %div.bg_bottom
