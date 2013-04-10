@@ -6,7 +6,7 @@
   <%= render "shared/sidebar", repo: @repo %>
 <% end %>
 
-<h2><%= @repo.name.capitalize %></h2>
+<h2 id="top"><%= @repo.name.capitalize %></h2>
 <p><%= @repo.description %></p>
 <hr/>
 <%= render "shared/notes" %>
