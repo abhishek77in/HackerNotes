@@ -15,3 +15,6 @@
 //= require_directory ../../../vendor/assets/javascripts/
 //= require_tree .
 
+$(document).ready(function() {
+  $(".fancySelectBox").selectBox();
+});
