@@ -24,7 +24,7 @@
           = image_tag s.image
           %br
           = s.description
-    %hr
+  %hr
 
 = render 'shared/resources', resources: @tips, id: 'tips', title: 'Tips n Tricks' unless @tips.empty?
 = render 'shared/resources', resources: @qnas, id: 'qnas', title: 'FAQs' unless @qnas.empty?
