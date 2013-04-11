@@ -1,7 +1,16 @@
+- notes = { 'Blogs' => 'blogs',
+            'Subscribe' => 'subscribe',
+            "Tips 'n' Tricks" => 'tips',
+            'Slides' => 'slides',
+            'FAQs' => 'qnas',
+            'Screencasts' => 'screencasts',
+            'Videos' => 'videos',
+            'Noteworthy' => 'noteworthies' }
+
 %h2
   \== Add a note ==
 = form_tag(create_note_path, method: 'post') do
   = url_field_tag 'url', nil, placeholder: 'enter resource url', required: true
   = hidden_field :id, @repo.id
-  = select_tag 'resource', "<option value='blogs'>Blogs</option>".html_safe
+  = select_tag 'resource', options_for_select(notes)
   = submit_tag 'add', class: 'button'
