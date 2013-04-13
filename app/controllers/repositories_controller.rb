@@ -17,6 +17,11 @@ class RepositoriesController < ApplicationController
     @screencasts = @repo.screencasts.all
   end
 
+  def show_resources
+    @repo = GithubService.new.fetch(params[:owner], params[:name])
+    @resources = @repo.send(params[:resource]).all
+  end
+
   def create_note
     @repo = Repository.find(params[:id].keys.first)
     resource = params[:resource]
