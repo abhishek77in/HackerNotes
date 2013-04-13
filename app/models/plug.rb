@@ -17,6 +17,7 @@ module Plug
     field :thumbnail_height, type: String
     field :thumbnail_width, type: String
 
+    field :votes, type: Hash, default: -> { Hash.new }
 
     belongs_to :user
     validates_presence_of :user
