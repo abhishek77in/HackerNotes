@@ -85,6 +85,9 @@ GEM
     json (1.7.7)
     jwt (0.1.5)
       multi_json (>= 1.0)
+    kaminari (0.14.1)
+      actionpack (>= 3.0.0)
+      activesupport (>= 3.0.0)
     mail (2.4.4)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
@@ -197,6 +200,7 @@ DEPENDENCIES
   google-search (~> 1.0.3)
   haml (~> 4.0.1)
   jquery-rails
+  kaminari (~> 0.14.1)
   mechanize (~> 2.5.1)
   mongoid (~> 3.1.2)
   omniauth-github (~> 1.1.0)
