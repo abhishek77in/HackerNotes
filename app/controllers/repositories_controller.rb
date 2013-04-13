@@ -6,20 +6,20 @@ class RepositoriesController < ApplicationController
 
   def show_repo
     @repo = GithubService.new.fetch(params[:owner], params[:name])
-    @videos = @repo.videos.all
-    @tweeters = @repo.tweeters.all
-    @subs_services = @repo.subscription_services.all
-    @blogs = @repo.blogs.all
-    @tips = @repo.tips.all
-    @slides = @repo.slides.all
-    @qnas = @repo.qnas.all
-    @noteworthies = @repo.noteworthies.all
-    @screencasts = @repo.screencasts.all
+    @videos = @repo.videos.limit(10)
+    @tweeters = @repo.tweeters.limit(10)
+    @subs_services = @repo.subscription_services.limit(10)
+    @blogs = @repo.blogs.limit(8)
+    @tips = @repo.tips.limit(10)
+    @slides = @repo.slides.limit(10)
+    @qnas = @repo.qnas.limit(8)
+    @noteworthies = @repo.noteworthies.limit(8)
+    @screencasts = @repo.screencasts.limit(10)
   end
 
   def show_resources
     @repo = GithubService.new.fetch(params[:owner], params[:name])
-    @resources = @repo.send(params[:resource]).all
+    @resources = @repo.send(params[:resource]).page params[:page]
   end
 
   def create_note
