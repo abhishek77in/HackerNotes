@@ -9,6 +9,7 @@ class Repository
   field :description, type: String
   field :watchers, type: Integer
   field :forks, type: Integer
+  field :contributors, type: Array
 
   after_create :create_from_service
 
