@@ -1,2 +1,4 @@
+= paginate @resources
+%hr
 = render 'resources', resources: @resources, id: 'blogs', title: 'Blogs' unless @resources.empty?
 = paginate @resources
