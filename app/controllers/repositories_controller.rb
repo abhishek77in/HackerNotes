@@ -4,7 +4,7 @@ class RepositoriesController < ApplicationController
     @g_repos = GithubService.new.search(params[:q])
   end
 
-  def show_repo
+  def show
     @repo = GithubService.new.fetch(params[:owner], params[:name])
     @videos = @repo.videos.limit(10)
     @tweeters = @repo.tweeters.limit(10)
