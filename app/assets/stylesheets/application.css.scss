@@ -31,6 +31,17 @@ nav.pagination {
   letter-spacing: 3px;
 }
 
+#slides .box {
+  width: 330px;
+  height: 280px;
+  display: inline;
+  overflow: hidden;
+  float: left;
+  img {
+    padding-top: 4px;
+  }
+}
+
 .vote {
   display: inline;
   float: left;

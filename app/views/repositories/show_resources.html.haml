@@ -1,5 +1,6 @@
 = paginate @resources
 %hr
 %h2= title_link @repo
-= render 'resources', resources: @resources, id: meta_id(@resources), title: title(@resources) unless @resources.empty?
+- media = meta_id(@resources) == 'slides' ? 'slides' : 'resources'
+= render media, resources: @resources, id: meta_id(@resources), title: title(@resources) unless @resources.empty?
 = paginate @resources

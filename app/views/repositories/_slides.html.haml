@@ -1,7 +1,7 @@
 %section{id: id, class: 'clearfix'}
   %a{href: show_resources_path(owner: @repo.owner, name: @repo.name, resource: id)}
     %h2= title
-  - slides.each do |s|
+  - resources.each do |s|
     %div.box
       %p
         = link_to(s.title, s.url)
