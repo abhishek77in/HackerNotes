@@ -14,7 +14,11 @@ module RepositoriesHelper
   end
 
   def title(resources)
-    NOTES.invert[resources.name.to_s.downcase.pluralize]
+    NOTES.invert[meta_id(resources)]
+  end
+
+  def meta_id(resources)
+    resources.name.to_s.downcase.pluralize
   end
 
   def description(repo)

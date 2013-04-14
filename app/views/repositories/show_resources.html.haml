@@ -1,5 +1,5 @@
 = paginate @resources
 %hr
 %h2= title_link @repo
-= render 'resources', resources: @resources, id: 'blogs', title: title(@resources) unless @resources.empty?
+= render 'resources', resources: @resources, id: meta_id(@resources), title: title(@resources) unless @resources.empty?
 = paginate @resources
