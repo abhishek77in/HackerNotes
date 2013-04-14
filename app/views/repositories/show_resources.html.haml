@@ -1,14 +1,5 @@
-- notes = { 'Blogs' => 'blogs',
-            'Subscribe' => 'subscribe',
-            "Tips n Tricks" => 'tips',
-            'Slides' => 'slides',
-            'FAQ' => 'qnas',
-            'Screencasts' => 'screencasts',
-            'Videos' => 'videos',
-            'Noteworthy' => 'noteworthies' }
-
 = paginate @resources
 %hr
 %h2= title_link @repo
-= render 'resources', resources: @resources, id: 'blogs', title: notes.invert[@resources.name.to_s.downcase.pluralize] unless @resources.empty?
+= render 'resources', resources: @resources, id: 'blogs', title: title(@resources) unless @resources.empty?
 = paginate @resources
