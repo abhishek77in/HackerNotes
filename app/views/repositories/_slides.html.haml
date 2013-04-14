@@ -1,0 +1,11 @@
+%section#slides.clearfix
+  %h2 Slides
+  - slides.each do |s|
+    %div.box
+      %p
+        = link_to(s.title, s.url)
+        %br
+        = image_tag s.image
+        %br
+        = s.description
+%hr
