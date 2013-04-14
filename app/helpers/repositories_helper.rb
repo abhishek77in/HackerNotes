@@ -1,6 +1,6 @@
 module RepositoriesHelper
 
-  def title(repo)
+  def title_link(repo)
     link_to repo.name.capitalize, show_repo_path(repo.owner, repo.name)
   end
 
