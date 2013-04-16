@@ -155,5 +155,7 @@ application.js: application-f977c8d0f628dc008e71191473067fce.js
 application/index.js: application-f977c8d0f628dc008e71191473067fce.js
 application.css: application-51592daca4c079505e236b01aa8057c1.css
 application/index.css: application-51592daca4c079505e236b01aa8057c1.css
+repo/repositories.css: repo/repositories-672492b94d86b5d8c77b5b257b253a80.css
+repo/repositories/index.css: repo/repositories-672492b94d86b5d8c77b5b257b253a80.css
 jquery.min.map: jquery.min-6c267bfd2b3f36e6edccb2e584934c1c.map
 jquery/index.min.map: jquery.min-6c267bfd2b3f36e6edccb2e584934c1c.map
