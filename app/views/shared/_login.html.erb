@@ -7,5 +7,5 @@
   <% end %>
   <br/>
   <br/>
-  <%= mail_to('jimmy@thehackernotes.com', 'PROVIDE FEEDBACK', {encode: 'javascript', subject: 'feedback', cc: 'abhishek77in@gmail.com', body: "You can do better!\n\nHere is how?"}) %>
+  <%= mail_to(ENV['FEEDBACK_MAILING_ADDRESS'], 'PROVIDE FEEDBACK', {encode: 'javascript', subject: 'feedback', body: "You can do better!\n\nHere is how?"}) %>
 </div>
