@@ -1,6 +1,6 @@
 module Jimmy
   def jimmy
-    @jimmy = User.where(nickname: 'jimmy-thehackernotes').first if @jimmy.nil?
+    @jimmy = User.where(nickname: ENV['JIMMY']).first if @jimmy.nil?
     @jimmy
   end
 
