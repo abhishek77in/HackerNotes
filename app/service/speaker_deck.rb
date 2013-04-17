@@ -1,5 +1,5 @@
 class SpeakerDeck
-  attr_accessor :title, :url, :description, :image
+  attr_accessor :title, :url, :description, :thumbnail_url
 
   REQ_URL = "https://speakerdeck.com/search?q="
   BASE_URL = "https://speakerdeck.com"
@@ -15,14 +15,14 @@ class SpeakerDeck
     @url = BASE_URL + slide.search(URL).first["href"]
     credit = slide.search(CREDIT).text
     @description = "#{@title} - by #{credit}"
-    @image = slide.search(IMAGE).first["src"]
+    @thumbnail_url = slide.search(IMAGE).first["src"]
   end
 
   def attributes
     { title: sanatize(title),
       url: url,
       description: sanatize(description),
-      image: image }
+      thumbnail_url: thumbnail_url }
   end
 
   def self.fetch(keyword)

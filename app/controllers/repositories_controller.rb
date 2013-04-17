@@ -24,14 +24,14 @@ class RepositoriesController < ApplicationController
 
   def create_note
     @repo = Repository.find(params[:id].keys.first)
-    resource = params[:resource]
-    note = @repo.send(resource).new(url: params[:url], user: current_user)
-    if note.save!
-      flash[:notice] = "#{resource.singularize.capitalize} added!"
+    resource_type = params[:resource]
+    @note = @repo.send(resource_type).new(url: params[:url], user: current_user)
+    if @note.save!
+      flash[:notice] = "#{resource_type.singularize.capitalize} added!"
       redirect_to show_repo_path({ owner: @repo.owner, name: @repo.name })
     else
       flash[:alert] = "Please resolve following errors and retry"
-      render :show_repo
+      render :show
     end
   end
 end

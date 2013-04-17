@@ -14,7 +14,7 @@ module Plug
     field :height, type: String
     field :width, type: String
 
-    field :thumbnail, type: String
+    field :thumbnail_url, type: String
     field :thumbnail_height, type: String
     field :thumbnail_width, type: String
 

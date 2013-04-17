@@ -10,7 +10,7 @@ module EmbedlyService
 
   def set_attributes(embedly_obj)
     self.common_attributes(embedly_obj).each do |attr|
-      self[attr] = embedly_obj[attr] if embedly_obj[attr]
+      self[attr] = embedly_obj.send(attr) if embedly_obj.send(attr)
     end
   end
 
