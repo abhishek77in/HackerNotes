@@ -5,7 +5,6 @@ module Plug
   included do
     include Mongoid::Document
     include Mongoid::Timestamps
-    include Mongoid::Paranoia
 
     field :title, type: String
     field :description, type: String
