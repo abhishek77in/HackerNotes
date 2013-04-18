@@ -3,7 +3,7 @@ class GithubService
   def search(keyword)
     keyword = optimize keyword
     g_repos = Rails.cache.fetch(keyword, :expires_in => 1.weeks) do
-      Github.new.search.repos(keyword: keyword)[:repositories]
+      Github.new(basic_auth: "#{ENV['GITHUB_LOGIN']}:#{ENV['GITHUB_PASSWORD']}").search.repos(keyword: keyword)[:repositories]
     end
   end
 
