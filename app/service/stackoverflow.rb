@@ -7,7 +7,7 @@ class Stackoverflow
   QA = ".search-result"
   TITLE = ".result-link span"
   URL = ".result-link span a"
-  DESCRIPTION = ".description"
+  DESCRIPTION = ".excerpt"
 
   def initialize(qa)
     @title = qa.search(TITLE).text
