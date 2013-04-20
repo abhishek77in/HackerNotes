@@ -4,9 +4,10 @@
   - resources.each do |r|
     %p
       = link_to(r.title, r.url)
-      = link_to_vote(r, :up)
-      = r.votes_count
-      = link_to_vote(r, :down)
+      %span
+        = link_to_vote(r, :up)
+        %span= r.votes_count
+        = link_to_vote(r, :down)
       %br
       = r.description
 %hr
