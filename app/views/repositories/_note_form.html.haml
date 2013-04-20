@@ -11,7 +11,11 @@
 %h2
   Add a hacker note
 = form_tag(create_note_path, method: 'post') do
-  = url_field_tag 'url', nil, placeholder: 'Enter Resource URL', required: true
+  = global_validation_message
+  = global_success_message
+  = text_field_tag 'url', nil, placeholder: 'Enter Resource URL', required: true
   = hidden_field :id, @repo.id
   = select_tag 'resource', options_for_select(notes), class: 'fancySelectBox'
   = submit_tag 'add', class: 'button'
+  = error_message_for(@note, :user)
+  = error_message_for(@note, :url)
