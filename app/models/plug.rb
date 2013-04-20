@@ -49,6 +49,6 @@ module Plug
   end
 
   def update_votes_count
-    self.votes_counter = self.votes_count
+    self.votes_counter = self.votes_count if self.votes_changed?
   end
 end
