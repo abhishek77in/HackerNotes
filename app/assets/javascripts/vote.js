@@ -24,14 +24,18 @@ $(document).ready(function () {
       'id' : id }
   }
 
-  $('.voteUp').click(function() {
+  $('.voteUp').click(function(e) {
+    e.preventDefault();
     data = getData(this, 'up');
-    vote(data);
+    console.log(data)
+    // vote(data);
   });
 
-  $('.voteDown').click(function() {
+  $('.voteDown').click(function(e) {
+    e.preventDefault();
     data = getData(this, 'down');
-    vote(data);
+    console.log(data)
+    // vote(data);
   });
 
 });

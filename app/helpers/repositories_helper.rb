@@ -21,8 +21,11 @@ module RepositoriesHelper
     resources.name.to_s.downcase.pluralize
   end
 
+  def link_to_vote(resource, direction)
+    link_to(direction, '#', class: "vote#{direction.capitalize}", 'data-id' => resource.id, 'data-resource' => resource.model_name)
+  end
+
   def description(repo)
     "#{repo.description}<br/>Created by: <b>#{repo.owner}</b>".html_safe
   end
-
 end
