@@ -8,7 +8,7 @@ Hackernotes::Application.routes.draw do
   match 'auth/failure', to: redirect('/')
 
   post '/create_note' => 'repositories#create_note'
-  put 'vote' => 'votes#vote'
+  put '/vote' => 'votes#vote'
 
   get ':owner/:name/:resource', :to => 'repositories#show_resources', :as => 'show_resources'
   get ':owner/:name', :to => 'repositories#show', :as => 'show_repo'

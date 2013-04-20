@@ -22,7 +22,7 @@ module RepositoriesHelper
   end
 
   def link_to_vote(resource, direction)
-    link_to(image_tag("vote_#{direction}.png"), '#', class: "vote vote#{direction.capitalize}", 'data-id' => resource.id, 'data-resource' => resource.model_name)
+    link_to(image_tag("vote_#{direction}.png"), '#', class: "vote vote#{direction.capitalize}", 'data-id' => resource.id, 'data-resource_type' => resource.model_name)
   end
 
   def description(repo)

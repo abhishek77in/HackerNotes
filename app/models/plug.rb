@@ -35,9 +35,9 @@ module Plug
   end
 
   def assign_vote(direction, user)
-    if direction == :up
+    if direction == 'up'
       self.votes[user.nickname] = 1
-    elsif direction == :down
+    elsif direction == 'down'
       self.votes[user.nickname] = -1
     end
     self.save
