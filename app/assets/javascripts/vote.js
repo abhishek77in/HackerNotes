@@ -1,11 +1,11 @@
 $(document).ready(function () {
-  function vote(data) {
+  function vote(that, data) {
     $.ajax({
       type: 'PUT',
       url: '/vote',
       data: data,
       success: function (result) {
-        console.log(result);
+        $(that).parent().find('span').text(result);
       }
     });
   }
@@ -27,15 +27,13 @@ $(document).ready(function () {
   $('.voteUp').click(function(e) {
     e.preventDefault();
     data = getData(this, 'up');
-    console.log(data)
-    vote(data);
+    vote(this, data);
   });
 
   $('.voteDown').click(function(e) {
     e.preventDefault();
     data = getData(this, 'down');
-    console.log(data)
-    vote(data);
+    vote(this, data);
   });
 
 });
