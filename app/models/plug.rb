@@ -30,4 +30,16 @@ module Plug
     embedded_in :repository
   end
 
+  def votes_count
+    self.votes.values.sum
+  end
+
+  def assign_vote(direction, user)
+    if direction == :up
+      self.votes[user.nickname] = 1
+    elsif direction == :down
+      self.votes[user.nickname] = -1
+    end
+    self.save
+  end
 end
