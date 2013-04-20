@@ -1,4 +1,4 @@
-- notes = [ sidebar(@blogs, 'Blogs', 'active'),
+- titles = [ sidebar(@blogs, 'Blogs', 'active'),
             sidebar(@subs_services, 'Subscribe', nil, 'subscribe'),
             sidebar(@tips, "Tips 'n' Tricks"),
             sidebar(@noteworthies, 'Noteworthy'),
@@ -13,7 +13,7 @@
       %span HackerNotes
       = repo.name
     %ul
-      - notes.each do |n|
+      - titles.each do |n|
         %li{class: n[:css_class]}
           = link_to(n[:title], n[:anchor])
     %div.bg_bottom
