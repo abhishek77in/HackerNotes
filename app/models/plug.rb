@@ -18,15 +18,20 @@ module Plug
     field :thumbnail_width, type: String
 
     field :votes, type: Hash, default: -> { Hash.new }
+    field :votes_counter, type: Integer, default: 0
 
     belongs_to :user
+
     validates_presence_of :user, message: 'Please login to add resources'
     # validates :title, presence: true, on: :create
     # validates :description, presence: true, on: :create
     validates :url, presence: true, uniqueness: true, format: URI::regexp(%w(http https))
 
-    default_scope desc(:created_at)
+    default_scope desc(:votes_counter)
+
     before_create :fetch_attributes, unless: Proc.new { self.user.nickname == ENV['JIMMY'] }
+    before_save :update_votes_count
+
     embedded_in :repository
   end
 
@@ -41,5 +46,9 @@ module Plug
       self.votes[user.nickname] = -1
     end
     self.save
+  end
+
+  def update_votes_count
+    self.votes_counter = self.votes_count
   end
 end
