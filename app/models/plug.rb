@@ -5,6 +5,7 @@ module Plug
   included do
     include Mongoid::Document
     include Mongoid::Timestamps
+    include Vote
 
     field :title, type: String
     field :description, type: String
@@ -33,22 +34,5 @@ module Plug
     before_save :update_votes_count
 
     embedded_in :repository
-  end
-
-  def votes_count
-    self.votes.values.sum
-  end
-
-  def assign_vote(direction, user)
-    if direction == 'up'
-      self.votes[user.nickname] = 1
-    elsif direction == 'down'
-      self.votes[user.nickname] = -1
-    end
-    self.save
-  end
-
-  def update_votes_count
-    self.votes_counter = self.votes_count if self.votes_changed?
   end
 end
