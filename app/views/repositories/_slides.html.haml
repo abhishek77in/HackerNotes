@@ -6,6 +6,10 @@
     %div.box
       %p
         = link_to(s.title, s.url)
+        %span.hidden.voteContainer
+          = link_to_vote(s, :up)
+          %span= s.votes_count
+          = link_to_vote(s, :down)
         %br
         = image_tag s.thumbnail_url
         %br

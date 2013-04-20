@@ -4,7 +4,7 @@
   - resources.each do |r|
     %p
       = link_to(r.title, r.url)
-      %span
+      %span.hidden.voteContainer
         = link_to_vote(r, :up)
         %span= r.votes_count
         = link_to_vote(r, :down)
