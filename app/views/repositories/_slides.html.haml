@@ -11,7 +11,9 @@
           %span= s.votes_count
           = link_to_vote(s, :down)
         %br
-        = image_tag s.thumbnail_url
+        = link_to image_tag(s.thumbnail_url),
+          resource_iframe_path(owner: @repo.owner, name: @repo.name, resource: 'slides', id: s.id),
+          { 'data-fancybox-type' => 'iframe', class: 'fancybox' }
         %br
         = s.description
 %hr
