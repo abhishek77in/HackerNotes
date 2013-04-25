@@ -1,7 +1,7 @@
 - unless @tweeters.empty?
   %section#tweeters.clearfix
     - @tweeters.each do |t|
-      = link_to(image_tag(t.image), t.url)
+      = link_to(image_tag(t.thumbnail_url), t.url)
     %hr
 
 %section#note_form.clearfix
