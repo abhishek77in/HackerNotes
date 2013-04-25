@@ -13,6 +13,12 @@
  *= require_directory ../../../vendor/assets/stylesheets/
  */
 
+.superscript {
+  position: relative;
+  top: -2em;
+  font-size: 30%;
+}
+
 header h1 {
   display: inline;
 }
