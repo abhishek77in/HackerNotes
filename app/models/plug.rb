@@ -30,9 +30,17 @@ module Plug
 
     default_scope desc(:votes_counter)
 
-    before_create :fetch_attributes, unless: Proc.new { self.user.nickname == ENV['JIMMY'] }
+    before_create :fetch_attributes, if: :media_or_not_jimmy
     before_save :update_votes_count
 
     embedded_in :repository
+  end
+
+  # Attributes should be fetched from Embedly if
+  # resource is a media (slides, videos)
+  # or if user is not Jimmy
+  def media_or_not_jimmy
+    return true if ['Video','Slide'].include?(self.model_name)
+    self.user.nickname != ENV['JIMMY']
   end
 end
