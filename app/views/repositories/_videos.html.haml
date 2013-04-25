@@ -1,0 +1,20 @@
+%section{id: id, class: 'clearfix'}
+  %a{href: show_resources_path(owner: @repo.owner, name: @repo.name, resource: id)}
+    %h2= title
+  %br
+  - resources.each do |r|
+    %div.box
+      %p
+        = link_to(r.title, r.url)
+        %span.hidden.voteContainer
+          = link_to_vote(r, :up)
+          %span= r.votes_count
+          = link_to_vote(r, :down)
+        %br
+        = link_to image_tag(r.thumbnail_url),
+          resource_iframe_path(owner: @repo.owner, name: @repo.name, resource: 'videos', id: r.id),
+          { 'data-fancybox-type' => 'iframe', class: 'fancybox' }
+        %br
+        = r.description
+%hr
+
