@@ -28,7 +28,7 @@ module Plug
     # validates :description, presence: true, on: :create
     validates :url, presence: true, uniqueness: true, format: URI::regexp(%w(http https))
 
-    default_scope desc(:votes_counter)
+    default_scope desc(:votes_counter).where(:votes_counter.gte => -3)
 
     before_create :fetch_attributes, if: :media_or_not_jimmy
     before_save :update_votes_count
