@@ -30,7 +30,8 @@ class SpeakerDeck
     slides = Array.new
     page = agent.get(REQ_URL + keyword.gsub(/-|_/,'+'))
     page.search(SLIDE).each do |slide|
-      slides << SpeakerDeck.new(slide) unless slide.nil?
+      next slide.nil? || slide.search(TITLE).nil?
+      slides << SpeakerDeck.new(slide)
     end
     slides
   end
