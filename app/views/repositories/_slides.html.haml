@@ -5,7 +5,7 @@
   - resources.each do |s|
     %div.box
       %p
-        = link_to(s.title, s.url)
+        = link_to(s.title.html_safe, s.url)
         %span.hidden.voteContainer
           = link_to_vote(s, :up)
           %span= s.votes_count
@@ -15,5 +15,5 @@
           resource_iframe_path(owner: @repo.owner, name: @repo.name, resource: 'slides', id: s.id),
           { 'data-fancybox-type' => 'iframe', class: 'fancybox' }
         %br
-        = s.description
+        = s.description.html_safe
 %hr
