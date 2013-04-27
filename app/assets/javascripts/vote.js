@@ -36,8 +36,4 @@ $(document).ready(function () {
     vote(this, data);
   });
 
-  $('section p').hover(function() {
-    $(this).find('.voteContainer').toggleClass('hidden');
-  });
-
 });

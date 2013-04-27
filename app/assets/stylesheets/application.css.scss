@@ -51,6 +51,13 @@ nav.pagination {
   }
 }
 
+.voteContainer {
+  display: none;
+  &:hover {
+    display: inline;
+  }
+}
+
 .vote {
   img {
     height: 25px;
