@@ -18,7 +18,7 @@ class GoogleVideo
     Google::Search::Video.new(:query => keyword).each do |site|
       videos << GoogleVideo.new(site) unless site.nil?
     end
-    videos
+    videos.uniq { |v| v.url }
   end
 
   def strip_tags(html)

@@ -18,7 +18,7 @@ class GoogleBlog
     Google::Search::Blog.new(:query => keyword).each do |site|
       blogs << GoogleBlog.new(site)
     end
-    blogs
+    blogs.uniq { |b| b.url }
   end
 
   def strip_tags(html)

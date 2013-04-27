@@ -18,7 +18,7 @@ class GoogleWeb
     Google::Search::Web.new(:query => keyword).each do |site|
       noteworthies << GoogleWeb.new(site) unless site.nil?
     end
-    noteworthies
+    noteworthies.uniq { |n| n.url }
   end
 
   def strip_tags(html)
