@@ -15,5 +15,5 @@
           resource_iframe_path(owner: @repo.owner, name: @repo.name, resource: 'slides', id: s.id),
           { 'data-fancybox-type' => 'iframe', class: 'fancybox' }
         %br
-        = s.description.html_safe
+        = truncate(s.description.html_safe, length: 140)
 %hr
