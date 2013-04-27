@@ -39,7 +39,7 @@ nav.pagination {
 
 #slides .box {
   width: 330px;
-  height: 280px;
+  height: 320px;
   display: inline;
   overflow: hidden;
   float: left;
@@ -51,15 +51,25 @@ nav.pagination {
   }
 }
 
-.voteContainer {
-  display: none;
-  &:hover {
-    display: inline;
-  }
-}
 
-.vote {
-  img {
+.resource {
+  h3.title {
+    font-size: 25px;
+    margin-bottom: 3px;
+    letter-spacing: 1px;
+    line-height: 45px;
+    text-transform: lowercase;
+    &:first-letter {
+      text-transform: capitalize;
+    }
+  }
+  h3 span {
+    height: 25px;
+  }
+  p {
+    margin-bottom: 10px;
+  }
+  .vote img{
     height: 25px;
   }
 }

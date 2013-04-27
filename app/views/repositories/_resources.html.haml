@@ -2,12 +2,13 @@
   %a{href: show_resources_path(owner: @repo.owner, name: @repo.name, resource: id)}
     %h2= title
   - resources.each do |r|
-    %p
-      = link_to(r.title.html_safe, r.url)
-      %span.hidden.voteContainer
-        = link_to_vote(r, :up)
-        %span= r.votes_count
-        = link_to_vote(r, :down)
-      %br
-      = r.description.html_safe
+    %div.resource
+      %h3.title
+        = link_to(r.title.html_safe, r.url)
+        %span.voteContainer.hidden
+          = link_to_vote(r, :up)
+          %span= r.votes_count
+          = link_to_vote(r, :down)
+      %p
+        = r.description.html_safe
 %hr
