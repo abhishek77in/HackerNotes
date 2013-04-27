@@ -45,6 +45,9 @@ nav.pagination {
   float: left;
   img {
     padding-top: 4px;
+    max-width: 210px;
+    max-height: 160px;
+    overflow: hidden;
   }
   p {
     padding-right: 10px;
