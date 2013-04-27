@@ -4,7 +4,7 @@ module RepositoriesHelper
             'Subscribe' => 'subscribe',
             "Tips n Tricks" => 'tips',
             'Slides' => 'slides',
-            'FAQ' => 'qnas',
+            'QnA' => 'qnas',
             'Screencasts' => 'screencasts',
             'Videos' => 'videos',
             'Noteworthy' => 'noteworthies' }
