@@ -26,14 +26,22 @@ $(document).ready(function () {
 
   $('.voteUp').click(function(e) {
     e.preventDefault();
-    data = getData(this, 'up');
-    vote(this, data);
+    if ($('#status').val() === 'true'){
+      data = getData(this, 'up');
+      vote(this, data);
+    } else {
+      alert('Please login with Github to vote');
+    }
   });
 
   $('.voteDown').click(function(e) {
     e.preventDefault();
-    data = getData(this, 'down');
-    vote(this, data);
+    if ($('#status').val() === 'true') {
+      data = getData(this, 'down');
+      vote(this, data);
+    } else {
+      alert('Please login with github to vote');
+    }
   });
 
   $('section .resource').hover(function() {
