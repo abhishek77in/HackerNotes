@@ -8,8 +8,8 @@
             'Tweeter' => 'tweeters',
             'Noteworthy' => 'noteworthies' }
 
-%h2
-  Add a hacker note
+%h3
+  %label{for: 'url'} Add a note
 = form_tag(create_note_path, method: 'post') do
   = global_validation_message
   = global_success_message
