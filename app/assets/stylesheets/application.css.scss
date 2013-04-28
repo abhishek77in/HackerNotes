@@ -10,6 +10,7 @@
  *
  *= require_self
  *= require_directory .
+ *= require_tree ./home
  *= require_directory ../../../vendor/assets/stylesheets/
  */
 
@@ -26,10 +27,6 @@ header h1 {
 .login {
   float: right;
   margin-top: 15px;
-}
-
-.repo-list {
-  font-size: 18px;
 }
 
 nav.pagination {
