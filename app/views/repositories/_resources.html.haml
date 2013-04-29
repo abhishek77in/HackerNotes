@@ -2,6 +2,7 @@
   %a{href: show_resources_path(owner: @repo.owner, name: @repo.name, resource: id)}
     %h2= title
   - resources.each do |r|
+    - next if r.title.nil?
     %div.resource
       %h3.title
         = link_to(r.title.html_safe, r.url)
@@ -10,5 +11,5 @@
           %span= r.votes_count
           = link_to_vote(r, :down)
       %p
-        = r.description.html_safe
+        = r.description.html_safe if r.description.present?
 %hr

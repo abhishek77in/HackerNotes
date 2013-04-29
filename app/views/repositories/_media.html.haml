@@ -3,6 +3,7 @@
     %h2= title
   %br
   - resources.each do |r|
+    - next if r.title.nil?
     %div.box.resource
       %h3.title
         = link_to(r.title.html_safe, r.url)
@@ -15,5 +16,5 @@
           resource_iframe_path(owner: @repo.owner, name: @repo.name, resource: media, id: r.id),
           { 'data-fancybox-type' => 'iframe', class: 'fancybox' }
         %br
-        = truncate(r.description.html_safe, length: 140)
+        = truncate(r.description.html_safe, length: 140) if r.description.present?
 %hr
