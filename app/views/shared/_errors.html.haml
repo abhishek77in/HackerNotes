@@ -1,0 +1,8 @@
+- if model.errors.any?
+  %div{:id => "error"}
+    %h2
+      = "#{pluralize(model.errors.count, "error")} prohibited #{model.model_name} from being added"
+    %ul
+      - model.errors.full_messages.each do |msg|
+        %li
+          = msg
