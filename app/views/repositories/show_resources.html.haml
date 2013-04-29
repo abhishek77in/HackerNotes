@@ -1,6 +1,8 @@
 = paginate @resources
-%hr
+- if (paginate @resources).present?
+  %hr
+
 %h2= title_link @repo
-- media = meta_id(@resources) == 'slides' ? 'slides' : 'resources'
-= render media, resources: @resources, id: meta_id(@resources), title: title(@resources) unless @resources.empty?
+- template = (meta_id(@resources) == ('slides' || 'videos')) ? 'media' : 'resources'
+= render template, resources: @resources, id: meta_id(@resources), title: title(@resources), media: meta_id(@resources) unless @resources.empty?
 = paginate @resources
