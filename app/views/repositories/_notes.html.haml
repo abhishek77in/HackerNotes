@@ -13,6 +13,6 @@
 = render 'resources', resources: @tips, id: 'tips', title: 'Tips n Tricks' unless @tips.empty?
 = render 'resources', resources: @noteworthies, id: 'noteworthies', title: 'Noteworthy' unless @noteworthies.empty?
 = render 'resources', resources: @screencasts, id: 'screencasts', title: 'Screencasts' unless @screencasts.empty?
-= render 'slides', resources: @slides, id: 'slides', title: 'Slides' unless @slides.empty?
-= render 'videos', resources: @videos, id: 'videos', title: 'Videos' unless @videos.empty?
+= render 'media', resources: @slides, id: 'slides', title: 'Slides', media: 'slides' unless @slides.empty?
+= render 'media', resources: @videos, id: 'videos', title: 'Videos', media: 'videos' unless @videos.empty?
 = render 'resources', resources: @qnas, id: 'qnas', title: 'QnA' unless @qnas.empty?

@@ -6,15 +6,14 @@
     %div.box.resource
       %h3.title
         = link_to(r.title.html_safe, r.url)
-        %span.hidden.voteContainer
+        %span.voteContainer.hidden
           = link_to_vote(r, :up)
           %span= r.votes_count
           = link_to_vote(r, :down)
       %p
         = link_to image_tag(r.thumbnail_url),
-          resource_iframe_path(owner: @repo.owner, name: @repo.name, resource: 'videos', id: r.id),
+          resource_iframe_path(owner: @repo.owner, name: @repo.name, resource: media, id: r.id),
           { 'data-fancybox-type' => 'iframe', class: 'fancybox' }
         %br
         = truncate(r.description.html_safe, length: 140)
 %hr
-
