@@ -5,7 +5,7 @@
   - resources.each do |r|
     %div.box.resource
       %h3.title
-        = h link_to(r.title, r.url)
+        = link_to(r.title.html_safe, r.url)
         %span.hidden.voteContainer
           = link_to_vote(r, :up)
           %span= r.votes_count
@@ -15,6 +15,6 @@
           resource_iframe_path(owner: @repo.owner, name: @repo.name, resource: 'videos', id: r.id),
           { 'data-fancybox-type' => 'iframe', class: 'fancybox' }
         %br
-        = h truncate(r.description, length: 140)
+        = truncate(r.description.html_safe, length: 140)
 %hr
 
