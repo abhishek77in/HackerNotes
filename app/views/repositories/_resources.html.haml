@@ -4,11 +4,11 @@
   - resources.each do |r|
     %div.resource
       %h3.title
-        = link_to(r.title.html_safe, r.url)
+        = h link_to(r.title, r.url)
         %span.voteContainer.hidden
           = link_to_vote(r, :up)
           %span= r.votes_count
           = link_to_vote(r, :down)
       %p
-        = r.description.html_safe
+        = h r.description
 %hr
