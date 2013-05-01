@@ -1,5 +1,5 @@
 - if model.errors && model.errors.any?
-  %div{:id => "error"}
+  %div.error
     Please resolve the following
     = model.errors.count > 1 ? 'errors' : 'error'
     and try again -

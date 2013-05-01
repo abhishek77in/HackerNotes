@@ -34,6 +34,23 @@ nav.pagination {
   letter-spacing: 3px;
 }
 
+.error {
+  color: red;
+  margin-top: 4px;
+  margin-left: 2px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: bold;
+  ul {
+    margin-top: 3px;
+    font-weight: normal;
+    list-style-type: none;
+  }
+}
+.error ul li:first-letter {
+  text-transform: capitalize;
+}
+
 .box {
   width: 310px;
   height: 320px;
@@ -70,20 +87,6 @@ nav.pagination {
   .vote img{
     height: 25px;
   }
-}
-
-.globalSuccessMessage {
-  font-size: 28px;
-  text-align: center;
-  display: block;
-  margin-bottom: 20px;
-  color: green;
-}
-
-.globalValidationMessage {
-  font-size: 18px;
-  display: block;
-  color: red;
 }
 
 .fancySelectBox {
