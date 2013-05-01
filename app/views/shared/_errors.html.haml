@@ -1,0 +1,9 @@
+- if model.errors && model.errors.any?
+  %div{:id => "error"}
+    Please resolve the following
+    = model.errors.count > 1 ? 'errors' : 'error'
+    and try again -
+    %ul
+      - model.errors.messages.values.each do |msg|
+        %li
+          = msg.first

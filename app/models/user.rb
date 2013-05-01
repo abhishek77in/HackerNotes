@@ -2,7 +2,6 @@ class User
   include Mongoid::Document
   field :uid, type: String
   field :name, type: String
-  field :email, type: String
   field :nickname, type: String
   field :image, type: String
   attr_accessible :uid, :name, :email, :nickname, :image

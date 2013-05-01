@@ -7,7 +7,7 @@ class Video
   def whitelisted?
     hostname = URI.parse(self.url).hostname
     unless HOSTNAME_WHITELIST.include?(hostname)
-      errors.add(:whitelist, "resource should belong to #{HOSTNAME_WHITELIST.join(', ')}")
+      errors.add(:whitelist, "Video should belong to Youtube.com or Vimeo.com")
     end
   end
 end
