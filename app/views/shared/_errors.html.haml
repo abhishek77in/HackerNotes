@@ -1,8 +1,9 @@
-- if model.errors.any?
+- if model.errors && model.errors.any?
   %div{:id => "error"}
-    %h2
-      = "#{pluralize(model.errors.count, "error")} prohibited #{model.model_name} from being added"
+    Please resolve the following
+    = model.errors.count > 1 ? 'errors' : 'error'
+    and try again -
     %ul
-      - model.errors.full_messages.each do |msg|
+      - model.errors.messages.values.each do |msg|
         %li
-          = msg
+          = msg.first

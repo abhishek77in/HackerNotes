@@ -7,7 +7,7 @@ class Slide
   def whitelisted?
     hostname = URI.parse(self.url).hostname
     unless HOSTNAME_WHITELIST.include?(hostname)
-      errors.add(:whitelist, "resource should belong to #{HOSTNAME_WHITELIST.join(', ')}")
+      errors.add(:whitelist, "Slide should belong to Speakerdeck.com or Slideshare.net")
     end
   end
 end
