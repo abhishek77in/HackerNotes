@@ -37,6 +37,7 @@ nav.pagination {
 .box {
   width: 310px;
   height: 320px;
+  margin-right: 10px;
   display: inline;
   overflow: hidden;
   float: left;
@@ -45,9 +46,6 @@ nav.pagination {
     max-width: 210px;
     max-height: 160px;
     overflow: hidden;
-  }
-  p {
-    padding-right: 10px;
   }
 }
 
