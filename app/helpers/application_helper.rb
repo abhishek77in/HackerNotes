@@ -1,5 +1,9 @@
 module ApplicationHelper
 
+  def page_title(page_title)
+    content_for(:page_title) { page_title }
+  end
+
   def success_message
     if flash[:notice].present?
       %Q[<div class="successMessage">#{flash[:notice]}</div>].html_safe

@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <title>HackerNotes</title>
+  <title>HackerNotes - <%= yield(:page_title).present? ? yield(:page_title) : "Collection of awesome developer notes" %></title>
   <%= render "shared/analytics" %>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>

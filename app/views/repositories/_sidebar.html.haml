@@ -7,6 +7,9 @@
             sidebar(@videos, 'Videos'),
             sidebar(@qnas, 'QnA') ].compact
 
+- title_values = titles.map { |t| t[:anchor].delete('#').titlecase }
+= page_title "#{title_values.join(' | ')} for #{@repo.name.capitalize}"
+
 %aside#sidebar
   %nav
     %a.logo#nav-logo{href: '#top'}
