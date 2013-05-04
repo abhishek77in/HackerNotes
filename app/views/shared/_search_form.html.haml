@@ -1,5 +1,5 @@
 = form_tag("/search", :method => "get") do
   %h3
     %label{for: 'q'} Search for your favourite Project on Github
-  = text_field_tag(:q, params[:q], placeholder: 'ex. ruby, node, twitter bootstrap')
+  = text_field_tag(:q, params[:q], placeholder: 'ex. ruby, node, twitter bootstrap', required: true)
   = submit_tag("Search", class: 'button')
