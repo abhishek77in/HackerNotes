@@ -2,6 +2,9 @@
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="Description" content="<%= yield(:page_description) %>">
+  <meta name="Keyword" content="<%= yield(:page_keywords) %>">
+
   <title>HackerNotes - <%= yield(:page_title) %></title>
   <%= render "shared/analytics" %>
   <%= stylesheet_link_tag    "application", :media => "all" %>
