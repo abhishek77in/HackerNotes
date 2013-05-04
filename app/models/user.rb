@@ -4,10 +4,7 @@ class User
   field :name, type: String
   field :nickname, type: String
   field :image, type: String
-  attr_accessible :uid, :name, :email, :nickname, :image
-
-  # run 'rake db:mongoid:create_indexes' to create indexes
-  index({ email: 1 }, { unique: true, background: true })
+  attr_accessible :uid, :name, :nickname, :image
 
   def self.from_github(auth)
     where(auth.slice("uid")).first || create_from_github(auth)
@@ -18,7 +15,6 @@ class User
       user.uid = auth['uid']
       if auth['info']
          user.name = auth['info']['name']
-         user.email = auth['info']['email']
          user.nickname = auth['info']['nickname']
          user.image = auth['info']['image']
       end
