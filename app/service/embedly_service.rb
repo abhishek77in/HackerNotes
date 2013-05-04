@@ -1,5 +1,5 @@
 module EmbedlyService
-  USER_AGENT = 'Mozilla/5.0 (compatible; mytestapp/1.0; my@email.com)'
+  USER_AGENT = 'Mozilla/5.0 (compatible; mytestapp/1.0; abhishek77in@gmail.com)'
 
   def fetch_attributes
     embedly_api = Embedly::API.new(user_agent: USER_AGENT, key: ENV['EMBEDLY_API_KEY'])
