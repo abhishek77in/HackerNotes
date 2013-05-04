@@ -1,11 +1,11 @@
 %div= render "shared/search_form"
 
 %div.home
-  <script src="https://gist.github.com/abhishek77in/5516844.js"></script>
   %h4.title Popular repositories
   %ul.repo-list
     - @popular_repos.each do |r|
       %li= link_to r.name, show_repo_path(owner: r.owner, name: r.name)
+  <script src="https://gist.github.com/abhishek77in/5516844.js"></script>
   %h4.title Recently visited repositories
   %ul.repo-list
     - @repos.each do |r|
