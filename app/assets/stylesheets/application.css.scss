@@ -27,6 +27,17 @@ header h1 {
 .login {
   float: right;
   margin-top: 15px;
+  div.mail {
+    clear: both;
+    display: block;
+    float: right;
+  }
+  div.tweet {
+    clear: both;
+    display: block;
+    float: right;
+    padding: 13px 0;
+  }
 }
 
 nav.pagination {

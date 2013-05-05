@@ -1,13 +1,17 @@
-<div class="login">
-  <% if current_user %>
-    Welcome <%= current_user.name if current_user %>!
-    <%= link_to "Sign out", signout_path, class: "btn-auth btn-github"  %>
-  <% else %>
-    <%= link_to "Sign in with Github", "/auth/github", class: "btn-auth btn-github" %>
-  <% end %>
-  <br/>
-  <br/>
-  <%= mail_to(ENV['FEEDBACK_MAILING_ADDRESS'], 'PROVIDE FEEDBACK',
-              {encode: 'javascript', subject: 'Feedback', body: "You can do better!\n\nHere is how?\n\nCurrent page URL - #{url_for(:only_path => false)}"}) %>
-  <%= yield :tweet %>
-</div>
+%div.login
+  - if current_user
+    Welcome
+    = current_user.name if current_user
+    = link_to "Sign out", signout_path, class: "btn-auth btn-github"
+  - else
+    = link_to "Sign in with Github", "/auth/github", class: "btn-auth btn-github"
+
+  %br
+  %div.tweet
+    = yield :tweet
+
+  %br
+  %div.mail
+    = mail_to(ENV['FEEDBACK_MAILING_ADDRESS'], 'PROVIDE FEEDBACK',
+      {encode: 'javascript', subject: 'Feedback',
+      body: "You can do better!\n\nHere is how?\n\nCurrent page URL - #{url_for(:only_path => false)}"})
