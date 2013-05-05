@@ -21,6 +21,11 @@ module RepositoriesHelper
     resources.name.to_s.downcase.pluralize
   end
 
+  def template(resources)
+    return 'media' if meta_id(@resources) == 'slides' || meta_id(@resources) == 'videos'
+    'resources'
+  end
+
   def link_to_vote(resource, direction)
     link_to(image_tag("vote_#{direction}.png"), '#', class: "vote vote#{direction.capitalize}", 'data-id' => resource.id, 'data-resource_type' => resource.model_name)
   end
