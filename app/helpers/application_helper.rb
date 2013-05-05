@@ -4,11 +4,11 @@ module ApplicationHelper
     content_for(:page_title) { page_title }
   end
 
-  def page_keywords
+  def page_keywords(page_keywords)
     content_for(:page_keywords) { page_keywords }
   end
 
-  def page_description
+  def page_description(page_description)
     content_for(:page_description) { page_description }
   end
 

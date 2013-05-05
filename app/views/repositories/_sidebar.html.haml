@@ -8,7 +8,10 @@
             sidebar(@qnas, 'QnA') ].compact
 
 - title_values = titles.map { |t| t[:anchor].delete('#').titlecase }
+- desc = title_values.join(', ').concat(" for #{@repo.name.capitalize}")
+= page_description(desc)
 = page_title "#{title_values.join(' | ')} for #{@repo.name.capitalize}"
+= page_keywords "#{@repo.name}, Development, Learn, Software development, Web development, Programming, Code, #{title_values.join(', ')}"
 
 %aside#sidebar
   %nav
