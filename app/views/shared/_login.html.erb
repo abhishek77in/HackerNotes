@@ -9,4 +9,5 @@
   <br/>
   <%= mail_to(ENV['FEEDBACK_MAILING_ADDRESS'], 'PROVIDE FEEDBACK',
               {encode: 'javascript', subject: 'Feedback', body: "You can do better!\n\nHere is how?\n\nCurrent page URL - #{url_for(:only_path => false)}"}) %>
+  <%= yield :tweet %>
 </div>
