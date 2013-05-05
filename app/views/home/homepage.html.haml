@@ -16,5 +16,6 @@
     - @repos.each do |r|
       %li= link_to r.name, show_repo_path(owner: r.owner, name: r.name)
 
-  %p.right.copyright
-    © 2013 thehackernotes.com, Inc. All rights reserved.
+  %p.copyright
+    %a.twitter-follow-button{href: "https://twitter.com/HackerNotes", 'data-show-count' => "false"} Follow @HackerNotes
+    %span © 2013 thehackernotes.com, All rights reserved.
