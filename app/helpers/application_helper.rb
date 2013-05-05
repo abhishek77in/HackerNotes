@@ -25,7 +25,7 @@ module ApplicationHelper
   end
 
   def tweet(msg)
-    tweet = %Q[<a href="https://twitter.com/share" class="twitter-share-button" data-text="#{msg}">Tweet</a>].html_safe
+    tweet = %Q[<a href="https://twitter.com/share" class="twitter-share-button" data-via="HackerNotes" data-text="#{msg}">Tweet</a>].html_safe
     content_for(:tweet) { tweet }
   end
 end
