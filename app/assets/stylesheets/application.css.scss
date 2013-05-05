@@ -34,6 +34,10 @@ nav.pagination {
   letter-spacing: 3px;
 }
 
+section a h2:hover {
+  color: #6db0da;
+}
+
 .error {
   border: 2px solid;
   background-color: #F2D09D;
@@ -97,7 +101,6 @@ nav.pagination {
   height: 35px;
   width: 110px;
   margin-left: 5px;
-  margin-bottom: 25px;
   font-family: Georgia, "Times New Roman", Times, serif;
   color: #575757;
   font-size: 20px;
