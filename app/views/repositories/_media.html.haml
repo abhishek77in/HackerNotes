@@ -14,7 +14,7 @@
       %p
         = link_to image_tag(r.thumbnail_url),
           resource_iframe_path(owner: @repo.owner, name: @repo.name, resource: media, id: r.id),
-          { 'data-fancybox-type' => 'iframe', class: 'fancybox' }
+          { 'data-fancybox-type' => 'iframe', class: 'fancybox' } if r.thumbnail_url.present?
         %br
         = truncate(r.description.html_safe, length: 140) if r.description.present?
 %hr
