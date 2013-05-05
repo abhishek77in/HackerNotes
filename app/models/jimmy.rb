@@ -8,7 +8,7 @@ module Jimmy
     # Optimize later 
     # resources = resources.map { |r| r.attributes.merge(user: @jimmy) }
     # self.send(resource_type).collection.insert(resources)
-    resources.each do |resource|
+    resources.reverse.each do |resource|
       self.send(resource_type).create(resource.attributes.merge(user: jimmy))
     end
   end
