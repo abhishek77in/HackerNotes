@@ -7,7 +7,6 @@
 
 div.home {
   margin-top: 90px;
-  margin-bottom: 20px;
 
   h4.title {
     margin-top: 40px;
@@ -24,6 +23,9 @@ div.home {
   }
 }
 
-.copyright span {
-  float: right;
+.copyright {
+  margin-top: 40px;
+  span {
+    float: right;
+  }
 }
