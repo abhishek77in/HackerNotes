@@ -11,5 +11,5 @@
           %span= r.votes_count
           = link_to_vote(r, :down)
       %p
-        = r.description.html_safe if r.description.present?
+        = r.description if r.description.present?
 %hr
