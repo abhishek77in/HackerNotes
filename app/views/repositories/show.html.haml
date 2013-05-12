@@ -1,0 +1,12 @@
+- content_for :head do
+  = stylesheet_link_tag "repo/repositories"
+
+- content_for :sidebar do
+  = render "sidebar", repo: @repo
+
+%a{href: "http://github.com/#{@repo.owner}/#{@repo.name}"}
+  %h2= @repo.name.capitalize
+%p= @repo.description
+
+%hr
+= render "notes"
