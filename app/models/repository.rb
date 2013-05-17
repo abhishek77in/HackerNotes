@@ -10,6 +10,8 @@ class Repository
   field :watchers_count, type: Integer
   field :forks_count, type: Integer
 
+  validates :name, :uniqueness => {:scope => :owner}
+
   after_create :create_from_service
 
   def create_from_service
