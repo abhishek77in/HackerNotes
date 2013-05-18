@@ -6,7 +6,7 @@
 }
 
 div.home {
-  margin-top: 90px;
+  margin-top: 50px;
 
   h4.title {
     margin-top: 40px;
@@ -29,3 +29,24 @@ div.home {
     float: right;
   }
 }
+
+div.news {
+  p {
+    padding-top: 10px;
+  }
+  img {
+   float: left;
+   margin: 0 10px 0 0;
+  }
+  span {
+    font-weight: bold;
+  }
+}
+
+.warning {
+  margin-top: 15px;
+  span {
+    font-weight: bold;
+  }
+}
+
