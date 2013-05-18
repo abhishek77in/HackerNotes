@@ -3,19 +3,21 @@
 = page_description "HackerNotes provides resources around Open Source softwares to learn curated by Githubbers"
 = tweet "Check out HackerNotes - An active README for Open Source projects on Github"
 
-%h4.news
-  %span
-    News -
-  = link_to "HackerNotes Chrome Plugin", "https://chrome.google.com/webstore/detail/hackernotes-plugin/acphikopigkpfbkonnacihkhcefdeagg"
-  is out.
-  It makes coming from Github to HackerNotes super easy.
-  %br
-  In a hacking mood ? Fork it
-  = link_to "here", "https://github.com/abhishek77in/HackerNotesChromePlugin"
+%div.news
+  = link_to image_tag("logo-128.jpg", size: "64x64"), "https://chrome.google.com/webstore/detail/hackernotes-plugin/acphikopigkpfbkonnacihkhcefdeagg"
+  %p
+    %span
+      News -
+    = link_to "HackerNotes Chrome Plugin", "https://chrome.google.com/webstore/detail/hackernotes-plugin/acphikopigkpfbkonnacihkhcefdeagg"
+    is out.
+    It makes coming from Github to HackerNotes super easy.
+    %br
+    In a hacking mood ? Fork it
+    = link_to "here", "https://github.com/abhishek77in/HackerNotesChromePlugin"
 
-%div= render "shared/search_form"
 
 %div.home
+  %div= render "shared/search_form"
 
   %h4.title Popular open source repositories
   %ul.repo-list
