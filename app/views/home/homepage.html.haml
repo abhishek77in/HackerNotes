@@ -1,4 +1,4 @@
-= page_title "An active README for Open Source projects"
+= page_title "An active README for Open Source projects on Github"
 = page_keywords "hackernotes, software development, web development, github, open source"
 = page_description "HackerNotes provides resources around Open Source softwares to learn curated by Githubbers"
 = tweet "Check out HackerNotes - An active README for Open Source projects on Github"
@@ -20,13 +20,13 @@
   %div.user_repos= render "user_repos"
   %div.search_form= render "shared/search_form"
 
-  %h4.title Popular open source repositories
+  %h4.title Popular repositories
   %ul.repo-list
     - @popular_repos.each do |r|
       %li= link_to r.name, show_repo_path(owner: r.owner, name: r.name)
   <script src="https://gist.github.com/abhishek77in/5516844.js"></script>
 
-  %h4.title Recently visited open source repositories
+  %h4.title Recently visited repositories
   %ul.repo-list
     - @repos.each do |r|
       %li= link_to r.name, show_repo_path(owner: r.owner, name: r.name)
