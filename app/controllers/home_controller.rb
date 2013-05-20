@@ -9,7 +9,7 @@ class HomeController < ApplicationController
   private
   def user_repo_names
     return [] unless current_user
-    repos = Rails.cache.fetch(current_user.nickname, :expires_in => 1.weeks) do
+    repos = Rails.cache.fetch(current_user.nickname, :expires_in => 1.hour) do
       Github.new(basic_auth: "#{ENV['GITHUB_LOGIN']}:#{ENV['GITHUB_PASSWORD']}").repos.list(user: current_user.nickname).map(&:name)
     end
   end
