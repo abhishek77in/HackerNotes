@@ -52,7 +52,7 @@ module Jimmy
 
   def create_tweeters
     return if self.watchers_count < MIN_WATCHERS_COUNT_TWEETERS
-    keyword = self.name.gsub(/_|-/,' ')
+    keyword = self.name.gsub(/_|-/,' ') + " " + self.owner
     resources = TweeterService.fetch(keyword)
     add_to_db(resources, :tweeters)
   end
