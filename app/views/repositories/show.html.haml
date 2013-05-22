@@ -5,7 +5,7 @@
   = render "sidebar", repo: @repo
 
 %a{href: "http://github.com/#{@repo.owner}/#{@repo.name}"}
-  %h2= @repo.name.capitalize
+  %h2.github-repo-name= @repo.name.capitalize
 %p= @repo.description
 
 %hr
