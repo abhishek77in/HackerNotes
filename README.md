@@ -5,7 +5,7 @@
 Thanks to **Mavenhvie** team for being a indispensable support to this project since the inception of the idea.  
 [Mavenhive](http://www.mavenhive.in/) Team - [Jake](https://twitter.com/anandhak), [DP](https://twitter.com/codemangler), [Bhavin](https://twitter.com/bhavinjavia)  
 
-# Setup
+## Setup
 Add `export JIMMY=YOUR-GITHUB-USERNAME`  
 After doing this you should login using your Github account. (if you fail to this no resources data will be persisted)
 
@@ -14,3 +14,7 @@ After doing this you should login using your Github account. (if you fail to thi
 If jimmy has not signed in (does not exist in DB), the data validation fails and no resource gets added to database.
 
 2. rake:drop will drop the database user - you will need to login to mongohq and add user again.
+
+## Contribution
+Excuse me for poor documentation or if you are having problem with the setup. Will update README and documentation around that as the time permits.  
+Your are more than welcome to contribute to the project.
