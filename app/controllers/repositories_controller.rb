@@ -5,12 +5,14 @@ class RepositoriesController < ApplicationController
   end
 
   def show
-    @repo = GithubService.new.fetch(params[:owner], params[:name])
+    owner, name = request.url.split('/')[3], request.url.split('/')[4]
+    @repo = GithubService.new.fetch(owner, name)
     popuplate_resources
   end
 
   def show_resources
-    @repo = GithubService.new.fetch(params[:owner], params[:name])
+    owner, name = request.url.split('/')[3], request.url.split('/')[4]
+    @repo = GithubService.new.fetch(owner, name)
     @resources = @repo.send(params[:resource]).page params[:page]
   end
 
