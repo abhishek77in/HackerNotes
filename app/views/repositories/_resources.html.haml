@@ -6,10 +6,12 @@
     %div.resource
       %h3.title
         = link_to(r.title.html_safe, r.url)
-        %span.voteContainer.hidden
+        %span.voteContainer
           = link_to_vote(r, :up)
           %span= r.votes_count
           = link_to_vote(r, :down)
+        %span
+          = link_to_remove_if_power_user(r, @repo)
       %p
         = r.description if r.description.present?
 %hr

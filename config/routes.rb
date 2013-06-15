@@ -9,6 +9,7 @@ Hackernotes::Application.routes.draw do
 
   post '/create_note' => 'repositories#create_note'
   put '/vote' => 'votes#vote'
+  delete '/remove' => 'remove#remove'
 
   get ':owner/:name/:resource/:id', :to => 'notes#resource_iframe', :as => 'resource_iframe'
 

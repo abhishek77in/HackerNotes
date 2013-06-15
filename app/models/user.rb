@@ -21,4 +21,9 @@ class User
     end
   end
 
+  def power_user?(repo_owner)
+    return true if self.nickname == ENV['JIMMY']
+    self.nickname == repo_owner ? true : false
+  end
+
 end
