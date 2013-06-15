@@ -5,7 +5,7 @@ $(document).ready(function () {
       url: '/remove',
       data: data,
       success: function (result) {
-        $(that).parent().find('span').text(result);
+        $(that).closest('.resource').remove();
       }
     });
   }
@@ -25,14 +25,8 @@ $(document).ready(function () {
 
   $('.remove').click(function(e) {
     e.preventDefault();
-    if ($('#status').val() === 'true'){
-      data = getData(this);
-      console.log('data:');
-      console.log(data);
-      remove(this, data);
-    } else {
-      alert('Please login with Github to vote');
-    }
+    data = getData(this);
+    remove(this, data);
   });
 
 });

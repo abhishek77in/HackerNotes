@@ -11,6 +11,8 @@
           = link_to_vote(r, :up)
           %span= r.votes_count
           = link_to_vote(r, :down)
+        %span
+          = link_to_remove(r)
       %p
         = link_to image_tag(r.thumbnail_url),
           resource_iframe_path(owner: @repo.owner, name: @repo.name, resource: media, id: r.id),
