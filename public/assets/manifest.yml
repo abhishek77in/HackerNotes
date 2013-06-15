@@ -25,6 +25,8 @@ League_Gothic-webfont/index.woff: League_Gothic-webfont-a7873edf9a534ed336956835
 4/index.jpg: 4-74ae336cbf2561ebb5c0ececb78904ca.jpg
 5.jpg: 5-18b5bfbf2a6e48bcd61ce40e70c6c4bf.jpg
 5/index.jpg: 5-18b5bfbf2a6e48bcd61ce40e70c6c4bf.jpg
+GoogleChromeLogo.png: GoogleChromeLogo-4f79d4840fa8df61e0949743e579b784.png
+GoogleChromeLogo/index.png: GoogleChromeLogo-4f79d4840fa8df61e0949743e579b784.png
 ImagesByGeishaboy500.txt: ImagesByGeishaboy500-3816a8bb0aa445b143309b5ef3962d4f.txt
 ImagesByGeishaboy500/index.txt: ImagesByGeishaboy500-3816a8bb0aa445b143309b5ef3962d4f.txt
 a_portfolio_bg.png: a_portfolio_bg-3605dfa795a51cbb43043da9e70ab38d.png
@@ -125,8 +127,8 @@ work_img.jpg: work_img-503a8c85d1cb942b6fd2e47f7c532d93.jpg
 work_img/index.jpg: work_img-503a8c85d1cb942b6fd2e47f7c532d93.jpg
 application.js: application-ecfe5fa71b77f33704b0e436dedc3e23.js
 application/index.js: application-ecfe5fa71b77f33704b0e436dedc3e23.js
-application.css: application-3ec20ced76b7c3046a781032d78a21bc.css
-application/index.css: application-3ec20ced76b7c3046a781032d78a21bc.css
+application.css: application-4fea437d4c5b3aa685464bdba8fadeed.css
+application/index.css: application-4fea437d4c5b3aa685464bdba8fadeed.css
 repo/repositories.css: repo/repositories-1cc712c88b599265ab7a1b73c6f70757.css
 repo/repositories/index.css: repo/repositories-1cc712c88b599265ab7a1b73c6f70757.css
 jquery.min.map: jquery.min-6c267bfd2b3f36e6edccb2e584934c1c.map
