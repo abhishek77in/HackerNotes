@@ -45,6 +45,8 @@ button.gif: button-59e7f42c6c6f9b7e5155e31712dd5a22.gif
 button/index.gif: button-59e7f42c6c6f9b7e5155e31712dd5a22.gif
 client_image_1.jpg: client_image_1-7c3d95fcaa9db1a9bf50d8575f3718bb.jpg
 client_image_1/index.jpg: client_image_1-7c3d95fcaa9db1a9bf50d8575f3718bb.jpg
+delete.png: delete-60f875eab74b9d285e931e13a580ea50.png
+delete/index.png: delete-60f875eab74b9d285e931e13a580ea50.png
 dot.png: dot-ce83a5e94f9650018892c31be59b4e04.png
 dot/index.png: dot-ce83a5e94f9650018892c31be59b4e04.png
 dot2.png: dot2-2b541e1ef3bd9e01917a905ab50cefb4.png
@@ -125,8 +127,8 @@ work_2.jpg: work_2-269c2ec74aa4ee38ec651a1dd56fedd5.jpg
 work_2/index.jpg: work_2-269c2ec74aa4ee38ec651a1dd56fedd5.jpg
 work_img.jpg: work_img-503a8c85d1cb942b6fd2e47f7c532d93.jpg
 work_img/index.jpg: work_img-503a8c85d1cb942b6fd2e47f7c532d93.jpg
-application.js: application-ecfe5fa71b77f33704b0e436dedc3e23.js
-application/index.js: application-ecfe5fa71b77f33704b0e436dedc3e23.js
+application.js: application-8827f40d4bce92992fdb4c7d54128fe9.js
+application/index.js: application-8827f40d4bce92992fdb4c7d54128fe9.js
 application.css: application-4fea437d4c5b3aa685464bdba8fadeed.css
 application/index.css: application-4fea437d4c5b3aa685464bdba8fadeed.css
 repo/repositories.css: repo/repositories-1cc712c88b599265ab7a1b73c6f70757.css
