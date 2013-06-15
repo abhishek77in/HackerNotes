@@ -44,13 +44,6 @@ div.home {
   }
 }
 
-.copyright {
-  margin-top: 40px;
-  span {
-    float: right;
-  }
-}
-
 div.news {
   p {
     padding-top: 10px;
@@ -71,3 +64,21 @@ div.news {
   }
 }
 
+/* ----copyright---- */
+.copyright{
+  margin-top: 40px;
+  margin-bottom: 8px;
+  padding-top: 13px;
+  float:left;
+  width:100%;
+  background:url(<%= asset_path 'line_border.gif' %>) repeat-x;
+}
+.copyright div {
+  float: right;
+}
+.copyright small{
+  font-size:11px;
+}
+.copyright a{
+  text-decoration:none;
+}

@@ -32,13 +32,11 @@
     - @repos.each do |r|
       %li= link_to r.name, show_repo_path(owner: r.owner, name: r.name)
 
-  %p.copyright
+  %div.copyright
     %a.twitter-follow-button{href: "https://twitter.com/HackerNotes", 'data-show-count' => "false"} Follow @HackerNotes
-    %span
-      © 2013
+    %div.small
+      © 
       = link_to 'thehackernotes.com', root_url
-      , All rights reserved.
-    %hr
-    Created by:
-    = link_to '@abhishek77in', 'https://twitter.com/abhishek77in'
-    \- Feel free to tweet any kind of feedback / ideas directly or even to say Hi
+      , 2013 /
+      Created by:
+      = link_to '@abhishek77in', 'https://twitter.com/abhishek77in'
