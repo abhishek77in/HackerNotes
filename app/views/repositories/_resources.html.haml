@@ -10,6 +10,8 @@
           = link_to_vote(r, :up)
           %span= r.votes_count
           = link_to_vote(r, :down)
+        %span
+          = link_to_remove(r)
       %p
         = r.description if r.description.present?
 %hr
