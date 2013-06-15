@@ -8,7 +8,7 @@
         = link_to(r.title.html_safe, r.url)
         %span.voteContainer
           = link_to_vote(r, :up)
-          %span= r.votescount
+          %span= r.votes_count
           = link_to_vote(r, :down)
         %span
           = link_to_remove_if_power_user(r, @repo)

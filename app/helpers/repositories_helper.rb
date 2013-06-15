@@ -40,7 +40,7 @@ module RepositoriesHelper
             '#',
             class: "remove",
             'data-id' => resource.id,
-            'data-resource_type' => resource.model_name) if current_user.power_user?(repo.owner)
+            'data-resource_type' => resource.model_name) if current_user && current_user.power_user?(repo.owner)
   end
 
   def description(repo)
