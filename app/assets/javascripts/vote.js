@@ -44,8 +44,4 @@ $(document).ready(function () {
     }
   });
 
-  $('section .resource').hover(function() {
-    $(this).find('.voteContainer').toggleClass('hidden');
-  });
-
 });
