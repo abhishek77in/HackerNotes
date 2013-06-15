@@ -11,7 +11,7 @@
           %span= r.votes_count
           = link_to_vote(r, :down)
         %span
-          = link_to_remove(r)
+          = link_to_remove_if_power_user(r, @repo)
       %p
         = r.description if r.description.present?
 %hr
