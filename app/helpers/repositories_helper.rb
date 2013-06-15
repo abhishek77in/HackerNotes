@@ -31,7 +31,7 @@ module RepositoriesHelper
   end
 
   def link_to_remove_if_power_user(resource, repo)
-    link_to('remove',
+    link_to(image_tag("delete.png"),
             '#',
             class: "remove",
             'data-id' => resource.id,
