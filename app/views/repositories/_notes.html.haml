@@ -1,3 +1,10 @@
+- if @noteworthies.empty?
+  %p.notification
+    Looks like 
+    = link_to "Jimmy", "https://github.com/JimmyHackerNotes"
+    is working hard gathering resources, 
+    meanwhile you can add your own or refresh the page to see the newly added ones.
+
 - unless @tweeters.empty?
   %section#tweeters.clearfix
     - @tweeters.each do |t|
