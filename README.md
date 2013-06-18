@@ -16,5 +16,5 @@ If jimmy has not signed in (does not exist in DB), the data validation fails and
 2. rake:drop will drop the database user - you will need to login to mongohq and add user again.
 
 ## Contribution
-Excuse me for poor documentation or if you are having problem with the setup. Will update README and documentation around that as the time permits.  
+Excuse me for no documentation or if you are having problem with the setup. Will update README and documentation around that as the time permits.  
 Your are more than welcome to contribute to the project.
