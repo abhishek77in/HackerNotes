@@ -1,4 +1,4 @@
-# [HackerNotes](http://www.thehackernotes.com)
+# [Hacker Notes](http://www.thehackernotes.com)
 {{ An active README for Open Source projects on Github }}
 
 ## Credits
