@@ -15,7 +15,6 @@ gem "binding_of_caller", "~> 0.7.1"
 gem "haml", "~> 4.0.1"
 gem "kaminari", "~> 0.14.1"
 gem 'delayed_job_mongoid'
-gem 'delayed_job_ironmq'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
