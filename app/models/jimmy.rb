@@ -17,7 +17,7 @@ module Jimmy
     return if self.watchers_count < MIN_WATCHERS_COUNT_VIDEOS
     keyword = self.name.to_a + self.description.split(' ').take(4)
     keyword = keyword.join(' ')
-    resources = GoogleVideo.fetch(keyword)
+    resources = GoogleVideo.fetch(keyword).first(5)
     add_to_db(resources, :videos)
   end
 
@@ -31,7 +31,7 @@ module Jimmy
     return if self.watchers_count < MIN_WATCHERS_COUNT_NOTEWORTHY
     keyword = self.name.to_a + self.description.split(' ').take(8)
     keyword = keyword.join(' ')
-    resources = GoogleWeb.fetch(keyword)
+    resources = GoogleWeb.fetch(keyword).first(10)
     add_to_db(resources, :noteworthies)
   end
 
@@ -46,7 +46,7 @@ module Jimmy
     return if self.watchers_count < MIN_WATCHERS_COUNT_BLOGS
     keyword = self.name.to_a + self.description.split(' ').take(8)
     keyword = keyword.join(' ')
-    resources = GoogleBlog.fetch(keyword)
+    resources = GoogleBlog.fetch(keyword).first(10)
     add_to_db(resources, :blogs)
   end
 
