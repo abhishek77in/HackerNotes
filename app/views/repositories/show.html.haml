@@ -1,6 +1,8 @@
 - content_for :head do
   = stylesheet_link_tag "repo/repositories"
 
+= render "shared/fork", name: @repo.name, owner: @repo.owner
+
 - content_for :sidebar do
   = render "sidebar", repo: @repo
 
