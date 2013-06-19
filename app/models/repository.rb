@@ -20,7 +20,7 @@ class Repository
     delay.create_tweeters
     delay.create_noteworthies
     delay.create_qnas
-    delay.create_videos
+    # delay.create_videos
   end
 
   embeds_many :videos
