@@ -7,7 +7,7 @@
     %div.box.resource
       %h3.title
         = link_to(r.title.html_safe, r.url)
-        %span.voteContainer
+        %span.voteContainer.hidden
           = link_to_vote(r, :up)
           %span= r.votes_count
           = link_to_vote(r, :down)
