@@ -1,1 +1,1 @@
-rvm use ruby-2.0.0@hackernotes --create
+rvm use ruby-1.9.3@hackernotes --create
