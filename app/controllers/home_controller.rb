@@ -1,6 +1,8 @@
 class HomeController < ApplicationController
   def homepage
+    @repos = Repository.desc(:created_at).limit(10)
     @popular_repos = Repository.desc(:watchers_count).limit(15)
+
     @user_repo_names = user_repo_names
   end
 

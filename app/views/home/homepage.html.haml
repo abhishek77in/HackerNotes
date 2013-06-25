@@ -27,6 +27,11 @@
       %li= link_to r.name, show_repo_path(owner: r.owner, name: r.name)
   <script src="https://gist.github.com/abhishek77in/5516844.js"></script>
 
+  %h4.title Recently visited repositories
+  %ul.repo-list
+    - @repos.each do |r|
+      %li= link_to r.name, show_repo_path(owner: r.owner, name: r.name)
+
   %div{style: 'text-align: center'}
     %h4.title Supported by
     = link_to image_tag("mavenhive-logo.gif", width: "100", alt: "mavenhive logo"), "http://mavenhive.in"
