@@ -20,16 +20,20 @@
 %div.home
   %div.search_form= render "shared/search_form"
 
-  %h4.title Popular repositories
-  %ul.repo-list
-    - @popular_repos.each do |r|
-      %li= link_to r.name, show_repo_path(owner: r.owner, name: r.name)
-  <script src="https://gist.github.com/abhishek77in/5516844.js"></script>
+  %div{style: 'float: left; width: 40%'}
+    <script src="https://gist.github.com/abhishek77in/5890917.js"></script>
+  %div{style: 'float: left; padding-left: 40px;'}
+    %h4.title Popular repositories
+    %ul.repo-list
+      - @popular_repos.each do |r|
+        %li= link_to r.name, show_repo_path(owner: r.owner, name: r.name)
+    %h4.title Recently visited repositories
+    %ul.repo-list
+      - @repos.each do |r|
+        %li= link_to r.name, show_repo_path(owner: r.owner, name: r.name)
 
-  %h4.title Recently visited repositories
-  %ul.repo-list
-    - @repos.each do |r|
-      %li= link_to r.name, show_repo_path(owner: r.owner, name: r.name)
+  %div{style: 'clear: left'}
+    <script src="https://gist.github.com/abhishek77in/5516844.js"></script>
 
   %div.user_repos= render "user_repos"
 
