@@ -1,6 +1,6 @@
 = page_title "An active README for Open Source projects on Github"
 = page_keywords "hacker notes, software development, web development, github, open source"
-= page_description "Hacker Notes provides resources around Open Source softwares to learn curated by Githubbers"
+= page_description "Hacker Notes provides resources around Open Source softwares to learn curated by Github users"
 = tweet "Check out Hacker Notes - An active README for Open Source projects on Github"
 
 = render "shared/fork", name: 'HackerNotes', owner: 'abhishek77in'
@@ -18,7 +18,6 @@
 
 
 %div.home
-  %div.user_repos= render "user_repos"
   %div.search_form= render "shared/search_form"
 
   %h4.title Popular repositories
@@ -31,6 +30,8 @@
   %ul.repo-list
     - @repos.each do |r|
       %li= link_to r.name, show_repo_path(owner: r.owner, name: r.name)
+
+  %div.user_repos= render "user_repos"
 
   %div{style: 'text-align: center'}
     %h4.title Supported by
