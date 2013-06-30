@@ -83,6 +83,8 @@ loader.gif: loader-7ec968aee576f76b14a7e9d754ec1b5a.gif
 loader/index.gif: loader-7ec968aee576f76b14a7e9d754ec1b5a.gif
 logo-128.jpg: logo-128-85144c2dc54cd101dfd519657d9978a3.jpg
 logo-128/index.jpg: logo-128-85144c2dc54cd101dfd519657d9978a3.jpg
+mavenhive-logo.gif: mavenhive-logo-ae21ad4265bf0d5ebe1505da3bddb306.gif
+mavenhive-logo/index.gif: mavenhive-logo-ae21ad4265bf0d5ebe1505da3bddb306.gif
 me.gif: me-8dbb8e63296c9b12cea2817ce01a8286.gif
 me/index.gif: me-8dbb8e63296c9b12cea2817ce01a8286.gif
 nav_active.png: nav_active-904c611573421efb7b2e79192cec8ab7.png
@@ -129,9 +131,9 @@ work_img.jpg: work_img-503a8c85d1cb942b6fd2e47f7c532d93.jpg
 work_img/index.jpg: work_img-503a8c85d1cb942b6fd2e47f7c532d93.jpg
 application.js: application-3134e7b284399346624efb40ff027fea.js
 application/index.js: application-3134e7b284399346624efb40ff027fea.js
-application.css: application-c3f3f749aa06db41f4efad424564b8ea.css
-application/index.css: application-c3f3f749aa06db41f4efad424564b8ea.css
-repo/repositories.css: repo/repositories-1cc712c88b599265ab7a1b73c6f70757.css
-repo/repositories/index.css: repo/repositories-1cc712c88b599265ab7a1b73c6f70757.css
+application.css: application-d02fc6a9bdfd6d0ebdf6a1dc29720736.css
+application/index.css: application-d02fc6a9bdfd6d0ebdf6a1dc29720736.css
+repo/repositories.css: repo/repositories-d4ebd8be8017b10fcb4926a6fbd58bd9.css
+repo/repositories/index.css: repo/repositories-d4ebd8be8017b10fcb4926a6fbd58bd9.css
 jquery.min.map: jquery.min-6c267bfd2b3f36e6edccb2e584934c1c.map
 jquery/index.min.map: jquery.min-6c267bfd2b3f36e6edccb2e584934c1c.map
