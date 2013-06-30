@@ -6,7 +6,7 @@
     - next if r.title.nil?
     %div.box.resource
       %h3.title
-        = link_to(r.title.html_safe, r.url)
+        = link_to(truncate(r.title, length: 50).html_safe, r.url)
         %span.voteContainer.hidden
           = link_to_vote(r, :up)
           %span= r.votes_count
@@ -18,5 +18,5 @@
           resource_iframe_path(owner: @repo.owner, name: @repo.name, resource: media, id: r.id),
           { 'data-fancybox-type' => 'iframe', class: 'fancybox' } if r.thumbnail_url.present?
         %br
-        = truncate(r.description.html_safe, length: 140) if r.description.present?
+        = truncate(r.description.html_safe, length: 110) if r.description.present?
 %hr

@@ -5,7 +5,7 @@
     - next if r.title.nil?
     %div.resource
       %h3.title
-        = link_to(r.title.html_safe, r.url)
+        = link_to(truncate(r.title, length: 60).html_safe, r.url)
         %span.voteContainer.hidden
           = link_to_vote(r, :up)
           %span= r.votes_count
@@ -13,5 +13,5 @@
         %span
           = link_to_remove_if_power_user(r, @repo)
       %p
-        = truncate(r.description.html_safe, length: 140) if r.description.present?
+        = truncate(r.description.html_safe, length: 180) if r.description.present?
 %hr
