@@ -16,9 +16,11 @@
 
 %aside#sidebar
   %nav
-    %a.logo#nav-logo{href: '#top'}
-      %span Hacker Notes
-      = repo.name
+    %span.logo#nav-logo
+      %a{href: root_path}
+        %span Hacker Notes
+      %a{href: '#top'}
+        = repo.name
     %ul
       - titles.each do |n|
         %li{class: n[:css_class]}
