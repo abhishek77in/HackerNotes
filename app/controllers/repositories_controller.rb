@@ -1,18 +1,16 @@
-class RepositoriesController < ApplicationController
+class RepositoriesController < RepositoriesBaseController
 
   def search
     @g_repos = GithubService.new.search(params[:q])
   end
 
   def show
-    owner, name = request.url.split('/')[3], request.url.split('/')[4]
-    @repo = GithubService.new.fetch(owner, name)
+    @repo = find_repo(params)
     popuplate_resources
   end
 
   def show_resources
-    owner, name = request.url.split('/')[3], request.url.split('/')[4]
-    @repo = GithubService.new.fetch(owner, name)
+    @repo = find_repo(params)
     @resources = @repo.send(params[:resource]).page params[:page]
   end
 
@@ -37,7 +35,7 @@ class RepositoriesController < ApplicationController
     @subs_services = @repo.subscription_services.limit(10)
     @blogs = @repo.blogs.limit(8)
     @tips = @repo.tips.limit(10)
-    @slides = @repo.slides.limit(10)
+    @slides = @repo.slides.limit(6)
     @qnas = @repo.qnas.limit(8)
     @noteworthies = @repo.noteworthies.limit(8)
     @screencasts = @repo.screencasts.limit(10)

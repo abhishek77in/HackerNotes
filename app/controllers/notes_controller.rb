@@ -1,7 +1,7 @@
-class NotesController < ApplicationController
+class NotesController < RepositoriesBaseController
 
   def resource_iframe
-    repo = GithubService.new.fetch(params[:owner], params[:name])
+    repo = find_repo(params)
     resource = repo.send(params[:resource]).where(id: params[:id]).first
     render :text => resource.html
   end
