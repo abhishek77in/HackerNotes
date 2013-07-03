@@ -7,7 +7,7 @@
   <%= favicon_link_tag "favicon.ico" %>
 
   <title>Hacker Notes - <%= yield(:page_title) %></title>
-  <%= render "shared/analytics" %>
+  <%= render "shared/analytics" unless Rails.env.development? %>
   <%= render "shared/twitter" %>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
