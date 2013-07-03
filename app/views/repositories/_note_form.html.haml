@@ -14,6 +14,6 @@
   = success_message
   = url_field_tag 'url', @note.try(:url), placeholder: 'Enter Resource URL', required: true
   = hidden_field :id, @repo.id
-  = select_tag 'resource', options_for_select(notes), class: 'fancySelectBox'
+  = select_tag 'resource', options_for_select(notes), class: 'fancySelectBox hidden'
   = submit_tag 'add', class: 'button'
   = render :partial => 'shared/errors', :locals => {:model => @note} if @note
