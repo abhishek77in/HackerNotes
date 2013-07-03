@@ -1,4 +1,4 @@
-class VotesController < ApplicationController
+class VotesController < RepositoriesBaseController
 
   def vote
     return unless current_user.present?
