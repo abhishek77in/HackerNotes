@@ -2,14 +2,14 @@
 {{ An active README for Open Source projects on Github }}
 
 ## Setup
-Clone the repository
-Bundle install all the gems
-Run mongodb server - Run `mongod` on the terminal
-Run `rake db:setup`
-Run `bundle exec thin start`
-At this point you should be able to access the application from the browser.
-Add `export JIMMY=YOUR-GITHUB-USERNAME`  
-After doing this you should login using your Github account. (if you fail to this no resources data will be persisted)
+Clone the repository 
+Bundle install all the gems 
+Run mongodb server - Run `mongod` on the terminal 
+Run `rake db:setup` 
+Run `bundle exec thin start` 
+At this point you should be able to access the application from the browser. 
+Add `export JIMMY=YOUR-GITHUB-USERNAME`   
+After doing this you should login using your Github account. (if you fail to this no resources data will be persisted) 
 
 ## Gotcha
 1. All the data initially in the application is added by Jimmy, this user gets created when Jimmy first time signs-in.
