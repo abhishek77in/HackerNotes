@@ -5,8 +5,8 @@
 
 = paginate @resources
 
+%h2= title_link @repo
 %nav.menu
-  = title_link @repo
   - @menu.each do |item|
     = link_to RepositoriesHelper::NOTES.invert[item.to_s],
       "/#{@repo.owner}/#{@repo.name}/#{item.to_s}"
