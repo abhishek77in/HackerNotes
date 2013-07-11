@@ -6,7 +6,7 @@
   <meta name="Keyword" content="<%= yield(:page_keywords) %>">
   <%= favicon_link_tag "favicon.ico" %>
 
-  <title>Hacker Notes - <%= yield(:page_title) %></title>
+  <title><%= yield(:page_title) %> - Hacker Notes</title>
   <%= render "shared/analytics" unless Rails.env.development? %>
   <%= render "shared/twitter" %>
   <%= stylesheet_link_tag    "application", :media => "all" %>
