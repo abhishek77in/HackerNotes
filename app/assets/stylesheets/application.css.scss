@@ -52,8 +52,19 @@ header h1 {
 }
 
 nav.pagination {
+  float: right;
   font-size: 16px;
+  font-style: italic;
   letter-spacing: 3px;
+}
+
+nav.menu {
+  display: inline-block;
+  a {
+    margin: 0 5px 0 5px;
+    font-size: 18px;
+  }
+  margin-bottom: 4px;
 }
 
 section a h2:hover, .github-repo-name:hover {

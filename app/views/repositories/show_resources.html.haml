@@ -4,17 +4,15 @@
 = tweet "Checkout #{title(@resources)} for #{@repo.name.capitalize}"
 
 = paginate @resources
-- if (paginate @resources).present?
-  %hr
 
-%h2{style: "text-align: center"}= title_link @repo
-
-%nav
+%nav.menu
+  = title_link @repo
   - @menu.each do |item|
     = link_to RepositoriesHelper::NOTES.invert[item.to_s],
       "/#{@repo.owner}/#{@repo.name}/#{item.to_s}"
+%hr
 
--if @resources.present?
+- if @resources.present?
   = render template(@resources), resources: @resources, media: meta_id(@resources), id: nil, title: nil
 
 = paginate @resources
