@@ -12,7 +12,7 @@ class RepositoriesController < RepositoriesBaseController
   def show_resources
     @repo = find_repo(params)
     @resources = @repo.send(params[:resource]).page params[:page]
-    @menu = menu
+    @menu = menu.compact
   end
 
   def create_note

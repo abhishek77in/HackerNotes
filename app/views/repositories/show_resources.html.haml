@@ -11,7 +11,8 @@
 
 %nav
   - @menu.each do |item|
-    = link_to item.to_s, "/#{@repo.owner}/#{@repo.name}/#{item.to_s}"
+    = link_to RepositoriesHelper::NOTES.invert[item.to_s],
+      "/#{@repo.owner}/#{@repo.name}/#{item.to_s}"
 
 -if @resources.present?
   = render template(@resources), resources: @resources, media: meta_id(@resources), id: nil, title: nil

@@ -1,7 +1,7 @@
 module RepositoriesHelper
 
  NOTES = { 'Blogs' => 'blogs',
-            'Subscribe' => 'subscribe',
+            'Subscribe' => 'subscription_services',
             "Tips n Tricks" => 'tips',
             'Slides' => 'slides',
             'QnA' => 'qnas',
@@ -18,7 +18,7 @@ module RepositoriesHelper
   end
 
   def meta_id(resources)
-    resources.name.to_s.downcase.pluralize
+    resources.name.to_s.underscore.pluralize
   end
 
   def template(resources)
