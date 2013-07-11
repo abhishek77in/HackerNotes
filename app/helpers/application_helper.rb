@@ -18,12 +18,6 @@ module ApplicationHelper
     end
   end
 
-  def sidebar(resources, title, css_class = nil, anchor = nil)
-    return nil if resources.empty?
-    anchor = anchor || resources.first.model_name.downcase.pluralize
-    { anchor: "##{anchor}", title: title, css_class: css_class }
-  end
-
   def tweet(msg)
     tweet = %Q[<a href="https://twitter.com/share" class="twitter-share-button" data-via="HackerNotes" data-text="#{msg}">Tweet</a>].html_safe
     content_for(:tweet) { tweet }
