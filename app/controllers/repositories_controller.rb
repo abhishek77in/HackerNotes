@@ -12,6 +12,7 @@ class RepositoriesController < RepositoriesBaseController
   def show_resources
     @repo = find_repo(params)
     @resources = @repo.send(params[:resource]).page params[:page]
+    @menu = menu
   end
 
   def create_note
@@ -39,5 +40,10 @@ class RepositoriesController < RepositoriesBaseController
     @qnas = @repo.qnas.limit(8)
     @noteworthies = @repo.noteworthies.limit(8)
     @screencasts = @repo.screencasts.limit(10)
+  end
+
+  def menu
+    menu = [:blogs, :subscription_services, :tips, :noteworthies, :screencasts, :slides, :videos, :qnas]
+    menu.map { |note| note if @repo.send(note).count > 0 }
   end
 end

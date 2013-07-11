@@ -9,6 +9,11 @@
 
 %h2{style: "text-align: center"}= title_link @repo
 
+%nav
+  - @menu.each do |item|
+    = link_to item.to_s, "/#{@repo.owner}/#{@repo.name}/#{item.to_s}"
+
 -if @resources.present?
   = render template(@resources), resources: @resources, media: meta_id(@resources), id: nil, title: nil
+
 = paginate @resources
