@@ -7,6 +7,8 @@
 - if (paginate @resources).present?
   %hr
 
-%h2= title_link @repo
-= render template(@resources), resources: @resources, id: meta_id(@resources), title: title(@resources), media: meta_id(@resources) unless @resources.empty?
+%h2{style: "text-align: center"}= title_link @repo
+
+-if @resources.present?
+  = render template(@resources), resources: @resources, media: meta_id(@resources), id: nil, title: nil
 = paginate @resources

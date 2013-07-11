@@ -1,7 +1,8 @@
 %section{id: id, class: 'clearfix'}
-  %a{href: show_resources_path(owner: @repo.owner, name: @repo.name, resource: id)}
-    %h2= title
-  %br
+  - if title
+    %a{href: show_resources_path(owner: @repo.owner, name: @repo.name, resource: id)}
+      %h2= title
+    %br
   - resources.each do |r|
     - next if r.title.nil?
     %div.box.resource
