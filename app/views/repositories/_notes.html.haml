@@ -7,7 +7,7 @@
     = link_to "refresh"
     the page to see the newly added ones.
 
-- unless @tweeters.empty?
+- if @tweeters.present?
   %section#tweeters.clearfix
     - @tweeters.each do |t|
       = link_to(image_tag(t.thumbnail_url, alt: t.title), t.url)
