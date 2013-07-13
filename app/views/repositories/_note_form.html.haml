@@ -17,3 +17,4 @@
   = select_tag 'resource', options_for_select(notes), class: 'fancySelectBox hidden'
   = submit_tag 'add', class: 'button'
   = render :partial => 'shared/errors', :locals => {:model => @note} if @note
+%div#suggestion
