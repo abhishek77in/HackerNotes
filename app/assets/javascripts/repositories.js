@@ -20,15 +20,15 @@ function slider () {
 }
 
 suggestions = {
-  'blogs' : "Any blog post relevent to the page",
-  'subscription_services' : "Add those website links which offer you to subscribe, this could also be a youtube channel",
-  'tips' : "Tips n Tricks could be Coderwall protips which you find interesting or a even a blog post",
-  'slides' : "You can add slides from speakerdeck.com or slideshare.net for now if you think we are missing something let us know",
+  'blogs' : "Add any blog post you find relevent to this project.",
+  'subscription_services' : "Add links to those websites which offer you to subscribe, this could also be a youtube channel as well.",
+  'tips' : "Tips n Tricks could be Coderwall protips which you find interesting or a even a blog post.",
+  'slides' : "You can add slides from speakerdeck.com or slideshare.net for now if you think we are missing something let us know.",
   'qnas' : "Add good to read questions/answers from stackoverflow.com or quora.com",
-  'screencasts' : "If you find a screencast you can link it here",
-  'videos' : "You can add videos from youtube.com or vimeo.com for now if you think we are missing something let us know",
-  'tweeters' : "Add people who tweet about this project, you can add them by adding link to their user profile",
-  'noteworthies' : "This could be official website for the project, or websites related to the project and NOT blog posts"
+  'screencasts' : "If you find a screencast you can link it here.",
+  'videos' : "You can add videos from youtube.com or vimeo.com",
+  'tweeters' : "You can add people who tweet about this project, you can add them by adding link to their user profile.",
+  'noteworthies' : "This could be official website for the project, or websites related to the project"
 }
 
 function suggest() {
