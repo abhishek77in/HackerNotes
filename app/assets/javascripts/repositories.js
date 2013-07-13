@@ -7,8 +7,10 @@ $(document).ready(function() {
 
 function showSelectBox() {
   $('input#url').focus(function() {
-    $('select#resource').removeClass('hidden');
-    $('#suggestion').text(suggestions['blogs']);
+    if($('select#resource').hasClass('hidden')) {
+      $('select#resource').removeClass('hidden');
+      $('#suggestion').text(suggestions['blogs']);
+    }
   });
 }
 
