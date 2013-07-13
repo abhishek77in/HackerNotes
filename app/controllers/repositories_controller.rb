@@ -33,6 +33,7 @@ class RepositoriesController < RepositoriesBaseController
   def popuplate_resources
     @videos = @repo.videos.limit(10)
     @tweeters = @repo.tweeters.limit(10)
+    @books = @repo.books.limit(6)
     @subscription_services = @repo.subscription_services.limit(10)
     @blogs = @repo.blogs.limit(8)
     @tips = @repo.tips.limit(10)

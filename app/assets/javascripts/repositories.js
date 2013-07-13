@@ -28,12 +28,12 @@ suggestions = {
   'screencasts' : "If you find a screencast you can link it here.",
   'videos' : "You can add videos from youtube.com or vimeo.com",
   'tweeters' : "Add people who tweet about this project, you can add them by adding link to their user profile page.",
+  'books' : "Add a book from amazon.com",
   'noteworthies' : "This could be official website for the project, or websites related to the project."
 }
 
 function suggest() {
   $('#resource').change(function() {
     $('#suggestion').text(suggestions[$(this).val()]);
-    console.log(suggestions[$(this).val()]);
   });
 }
