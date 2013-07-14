@@ -28,7 +28,6 @@ suggestions = {
   'slides' : "You can add slides from speakerdeck.com or slideshare.net.",
   'qnas' : "Add good to read questions/answers from stackoverflow.com or quora.com",
   'screencasts' : "If you find a screencast you can link it here.",
-  'videos' : "You can add videos from youtube.com or vimeo.com",
   'talks' : "You can add talks from youtube.com or vimeo.com",
   'tweeters' : "Add people who tweet about this project, you can add them by adding link to their user profile page.",
   'books' : "Add a book from amazon.com",

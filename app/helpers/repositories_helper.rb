@@ -6,7 +6,6 @@ module RepositoriesHelper
             'Slides' => 'slides',
             'QnA' => 'qnas',
             'Screencasts' => 'screencasts',
-            'Videos' => 'videos',
             'Talks' => 'talks',
             'Noteworthy' => 'noteworthies' }
 
@@ -24,7 +23,7 @@ module RepositoriesHelper
 
   def template(resources)
     resource_name = resource_name(resources)
-    return 'media' if resource_name == 'slides' || resource_name == 'talks' || resource_name == 'videos' || resource_name == 'screencasts'
+    return 'media' if resource_name == 'slides' || resource_name == 'talks' || resource_name == 'screencasts'
     'resources'
   end
 
