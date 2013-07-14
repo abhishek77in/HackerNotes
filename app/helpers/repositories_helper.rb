@@ -23,7 +23,8 @@ module RepositoriesHelper
   end
 
   def template(resources)
-    return 'media' if resource_name(@resources) == 'slides' || resource_name(@resources) == 'talks' || resource_name(@resources) == 'videos'
+    resource_name = resource_name(resources)
+    return 'media' if resource_name == 'slides' || resource_name == 'talks' || resource_name == 'videos' || resource_name == 'screencasts'
     'resources'
   end
 
