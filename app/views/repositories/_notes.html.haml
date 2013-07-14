@@ -30,4 +30,5 @@
 = render 'resources', resources: @screencasts, id: 'screencasts', title: 'Screencasts' unless @screencasts.empty?
 = render 'media', resources: @slides, id: 'slides', title: 'Slides', media: 'slides' unless @slides.empty?
 = render 'media', resources: @videos, id: 'videos', title: 'Videos', media: 'videos' unless @videos.empty?
+= render 'media', resources: @talks, id: 'talks', title: 'Talks', media: 'videos' unless @talks.empty?
 = render 'resources', resources: @qnas, id: 'qnas', title: 'QnA' unless @qnas.empty?

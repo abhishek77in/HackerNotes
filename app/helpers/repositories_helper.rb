@@ -7,6 +7,7 @@ module RepositoriesHelper
             'QnA' => 'qnas',
             'Screencasts' => 'screencasts',
             'Videos' => 'videos',
+            'Talks' => 'talks',
             'Noteworthy' => 'noteworthies' }
 
   def title_link(repo)
@@ -22,7 +23,7 @@ module RepositoriesHelper
   end
 
   def template(resources)
-    return 'media' if meta_id(@resources) == 'slides' || meta_id(@resources) == 'videos'
+    return 'media' if meta_id(@resources) == 'slides' || meta_id(@resources) == 'talks' || meta_id(@resources) == 'videos'
     'resources'
   end
 

@@ -32,6 +32,7 @@ class RepositoriesController < RepositoriesBaseController
   private
   def popuplate_resources
     @videos = @repo.videos.limit(4)
+    @talks = @repo.talks.limit(4)
     @tweeters = @repo.tweeters.limit(10)
     @books = @repo.books.limit(6)
     @subscription_services = @repo.subscription_services.limit(4)
@@ -44,7 +45,7 @@ class RepositoriesController < RepositoriesBaseController
   end
 
   def menu
-    menu = [:blogs, :subscription_services, :tips, :noteworthies, :screencasts, :slides, :videos, :qnas]
+    menu = [:blogs, :subscription_services, :tips, :noteworthies, :screencasts, :slides, :talks, :videos, :qnas]
     menu.map { |note| note if @repo.send(note).count > 0 }
   end
 end

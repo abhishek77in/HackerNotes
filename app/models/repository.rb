@@ -33,4 +33,5 @@ class Repository
   embeds_many :books
   embeds_many :noteworthies
   embeds_many :screencasts
+  embeds_many :talks
 end

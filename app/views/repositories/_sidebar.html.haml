@@ -5,6 +5,7 @@
             sidebar(@screencasts, 'Screencasts'),
             sidebar(@slides, 'Slides'),
             sidebar(@videos, 'Videos'),
+            sidebar(@talks, 'Talks'),
             sidebar(@qnas, 'QnA') ].compact
 
 - title_values = titles.map { |t| t[:anchor].delete('#').titlecase }
