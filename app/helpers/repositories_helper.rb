@@ -4,6 +4,8 @@ module RepositoriesHelper
             'Subscribe' => 'subscription_services',
             "Tips n Tricks" => 'tips',
             'Slides' => 'slides',
+            'Tutorials' => 'tutorials',
+            'Examples' => 'examples',
             'QnA' => 'qnas',
             'Screencasts' => 'screencasts',
             'Talks' => 'talks',

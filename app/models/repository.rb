@@ -32,4 +32,6 @@ class Repository
   embeds_many :noteworthies
   embeds_many :screencasts
   embeds_many :talks
+  embeds_many :tutorials
+  embeds_many :examples
 end
