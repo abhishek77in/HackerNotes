@@ -13,6 +13,6 @@
 %hr
 
 - if @resources.present?
-  = render template(@resources), resources: @resources, media: meta_id(@resources), id: nil, title: nil
+  = render template(@resources), resources: @resources, media: resource_name(@resources), id: nil, title: nil
 
 = paginate @resources

@@ -15,15 +15,15 @@ module RepositoriesHelper
   end
 
   def title(resources)
-    NOTES.invert[meta_id(resources)]
+    NOTES.invert[resource_name(resources)]
   end
 
-  def meta_id(resources)
+  def resource_name(resources)
     resources.name.to_s.underscore.pluralize
   end
 
   def template(resources)
-    return 'media' if meta_id(@resources) == 'slides' || meta_id(@resources) == 'talks' || meta_id(@resources) == 'videos'
+    return 'media' if resource_name(@resources) == 'slides' || resource_name(@resources) == 'talks' || resource_name(@resources) == 'videos'
     'resources'
   end
 
