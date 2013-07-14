@@ -45,7 +45,7 @@ class RepositoriesController < RepositoriesBaseController
   end
 
   def menu
-    menu = [:blogs, :subscription_services, :tips, :noteworthies, :screencasts, :slides, :talks, :videos, :qnas]
+    menu = [:talks, :blogs, :subscription_services, :screencasts, :slides, :videos, :tips, :qnas, :noteworthies]
     menu.map { |note| note if @repo.send(note).count > 0 }
   end
 end

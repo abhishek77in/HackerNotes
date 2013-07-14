@@ -23,12 +23,12 @@
   = render 'note_form'
   %hr
 
+= render 'media', resources: @talks, id: 'talks', title: 'Talks', media: 'videos' unless @talks.empty?
 = render 'resources', resources: @blogs, id: 'blogs', title: 'Blogs' unless @blogs.empty?
 = render 'resources', resources: @subscription_services, id: 'subscription_services', title: 'Subscribe' unless @subscription_services.empty?
-= render 'resources', resources: @tips, id: 'tips', title: 'Tips n Tricks' unless @tips.empty?
-= render 'resources', resources: @noteworthies, id: 'noteworthies', title: 'Noteworthy' unless @noteworthies.empty?
 = render 'media', resources: @screencasts, id: 'screencasts', title: 'Screencasts', media: 'videos' unless @screencasts.empty?
 = render 'media', resources: @slides, id: 'slides', title: 'Slides', media: 'slides' unless @slides.empty?
 = render 'media', resources: @videos, id: 'videos', title: 'Videos', media: 'videos' unless @videos.empty?
-= render 'media', resources: @talks, id: 'talks', title: 'Talks', media: 'videos' unless @talks.empty?
+= render 'resources', resources: @tips, id: 'tips', title: 'Tips n Tricks' unless @tips.empty?
 = render 'resources', resources: @qnas, id: 'qnas', title: 'QnA' unless @qnas.empty?
+= render 'resources', resources: @noteworthies, id: 'noteworthies', title: 'Noteworthy' unless @noteworthies.empty?

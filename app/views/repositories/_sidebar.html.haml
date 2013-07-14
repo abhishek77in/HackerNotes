@@ -1,12 +1,12 @@
-- titles = [ sidebar(@blogs, 'Blogs', 'active'),
-            sidebar(@subscription_services, 'Subscribe', nil, 'subscription_services'),
-            sidebar(@tips, "Tips 'n' Tricks"),
-            sidebar(@noteworthies, 'Noteworthy'),
-            sidebar(@screencasts, 'Screencasts'),
-            sidebar(@slides, 'Slides'),
-            sidebar(@videos, 'Videos'),
-            sidebar(@talks, 'Talks'),
-            sidebar(@qnas, 'QnA') ].compact
+- titles = [ sidebar(@talks, 'Talks'),
+             sidebar(@blogs, 'Blogs', 'active'),
+             sidebar(@subscription_services, 'Subscribe', nil, 'subscription_services'),
+             sidebar(@screencasts, 'Screencasts'),
+             sidebar(@slides, 'Slides'),
+             sidebar(@videos, 'Videos'),
+             sidebar(@tips, "Tips 'n' Tricks"),
+             sidebar(@qnas, 'QnA'),
+             sidebar(@noteworthies, 'Noteworthy') ].compact
 
 - title_values = titles.map { |t| t[:anchor].delete('#').titlecase }
 - desc = title_values.join(', ').concat(" for #{@repo.name.capitalize}")
