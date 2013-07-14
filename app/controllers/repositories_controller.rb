@@ -31,16 +31,16 @@ class RepositoriesController < RepositoriesBaseController
 
   private
   def popuplate_resources
-    @videos = @repo.videos.limit(10)
+    @videos = @repo.videos.limit(4)
     @tweeters = @repo.tweeters.limit(10)
     @books = @repo.books.limit(6)
-    @subscription_services = @repo.subscription_services.limit(10)
-    @blogs = @repo.blogs.limit(8)
-    @tips = @repo.tips.limit(10)
-    @slides = @repo.slides.limit(6)
-    @qnas = @repo.qnas.limit(8)
-    @noteworthies = @repo.noteworthies.limit(8)
-    @screencasts = @repo.screencasts.limit(10)
+    @subscription_services = @repo.subscription_services.limit(4)
+    @blogs = @repo.blogs.limit(4)
+    @tips = @repo.tips.limit(4)
+    @slides = @repo.slides.limit(4)
+    @qnas = @repo.qnas.limit(4)
+    @noteworthies = @repo.noteworthies.limit(4)
+    @screencasts = @repo.screencasts.limit(4)
   end
 
   def menu
