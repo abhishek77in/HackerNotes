@@ -29,8 +29,8 @@ suggestions = {
   'qnas' : "Add good to read questions/answers from stackoverflow.com or quora.com",
   'screencasts' : "If you find a screencast you can link it here.",
   'talks' : "You can add talks from youtube.com or vimeo.com",
-  'tutorials' : "Add links to tutorials",
-  'examples' : "Add sample applications or gists",
+  'tutorials' : "Add a link to tutorial",
+  'examples' : "Add a link to sample application on github or gist",
   'tweeters' : "Add people who tweet about this project, you can add them by adding link to their user profile page.",
   'books' : "Add a book from amazon.com",
   'noteworthies' : "This could be official website for the project, or websites related to the project."
