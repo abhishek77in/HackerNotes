@@ -9,6 +9,7 @@ class Karma
   field :resource_type
 
   validates :resource_id, :uniqueness => {:scope => :type}
+  validates_presence_of :points, :type, :repository_id, :resource_id, :resource_type
 
   before_save :update_total_karma
   embedded_in :user

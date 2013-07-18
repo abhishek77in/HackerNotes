@@ -7,7 +7,7 @@ class User
   field :name, type: String
   field :nickname, type: String
   field :image, type: String
-  field :total_karma, type: Integer
+  field :total_karma, type: Integer, default: 0
 
   attr_accessible :uid, :name, :nickname, :image, :total_karma
 
@@ -22,11 +22,23 @@ class User
     resource_details = { repository_id: resource.repository.id,
                          resource_id: resource.id,
                          resource_type: resource.class.to_s }
+    points = calculate_points(purpose, resource)
     case purpose
     when :resource
-      self.karmas.create({points: 3, type: purpose}.merge(resource_details))
+      self.karmas.create({points: points, type: purpose}.merge(resource_details))
     when :vote
-      self.karmas.create({points: 1, type: purpose}.merge(resource_details))
+      self.karmas.create({points: points, type: purpose}.merge(resource_details))
+    end
+  end
+
+  def calculate_points(purpose, resource)
+    reward_factor = 1
+    reward_factor = 2 if repository.owner?(self.nickname)
+    case purpose
+    when :resource
+      return 3 * reward_factor
+    when :vote
+      return 1 * reward_factor
     end
   end
 end
