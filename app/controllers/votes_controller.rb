@@ -6,6 +6,7 @@ class VotesController < RepositoriesBaseController
     resource_type = params[:resource_type].underscore.pluralize
     resource = @repo.send(resource_type).where(id: params[:id]).first
     resource.assign_vote(params[:direction], current_user)
+    current_user.reward_karma(:vote, resource)
     render :json => resource.votes_count
   end
 end

@@ -21,7 +21,7 @@ class RepositoriesController < RepositoriesBaseController
     @note = @repo.send(resource_type).new(url: params[:url], user: current_user)
     if @note.save
       flash[:notice] = "#{resource_type.singularize.capitalize} added!"
-      current_user.reward_karma(:add_resource, @note)
+      current_user.reward_karma(:resource, @note)
       redirect_to show_repo_path({ owner: @repo.owner, name: @repo.name })
     else
       flash[:alert] = "Please resolve following errors and retry"

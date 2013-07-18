@@ -8,9 +8,13 @@ class Karma
   field :resource_id
   field :resource_type
 
-  # before_save :update_total_karma
+  validates :resource_id, :uniqueness => {:scope => :type}
+
+  before_save :update_total_karma
   embedded_in :user
 
-  # def update_total_karma
-  # end
+  def update_total_karma
+    user.total_karma = user.karmas.map(&:points).reduce(:+)
+    user.save
+  end
 end

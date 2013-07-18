@@ -1,7 +1,10 @@
 %div.login
   - if current_user
     Welcome
-    = current_user.name if current_user
+    = current_user.name
+    (
+    = current_user.total_karma
+    )
     = link_to "Sign out", signout_path, class: "btn-auth btn-github"
   - else
     = link_to "Sign in with Github", "/auth/github", class: "btn-auth btn-github"

@@ -7,11 +7,11 @@ class User
   field :name, type: String
   field :nickname, type: String
   field :image, type: String
-  # field :total_karma, type: Integer
+  field :total_karma, type: Integer
 
-  attr_accessible :uid, :name, :nickname, :image
+  attr_accessible :uid, :name, :nickname, :image, :total_karma
 
-  embeds_many :karma
+  embeds_many :karmas
 
   def power_user?(repo_owner)
     return true if self.nickname == ENV['JIMMY']
@@ -21,12 +21,12 @@ class User
   def reward_karma(purpose, resource)
     resource_details = { repository_id: resource.repository.id,
                          resource_id: resource.id,
-                         resource_type: resource.class_name }
+                         resource_type: resource.class.to_s }
     case purpose
-    when :add_resource
-      self.karma.create({points: 3, type: 'resource'}.merge(resource_details))
+    when :resource
+      self.karmas.create({points: 3, type: purpose}.merge(resource_details))
     when :vote
-      self.karma.create({points: 1, type: 'vote'}.merge(resource_details))
+      self.karmas.create({points: 1, type: purpose}.merge(resource_details))
     end
   end
 end
