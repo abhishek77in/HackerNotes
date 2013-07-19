@@ -33,7 +33,7 @@ class User
 
   def calculate_points(purpose, resource)
     reward_factor = 1
-    reward_factor = 2 if repository.owner?(self.nickname)
+    reward_factor = 2 if resource.repository.owner?(self.nickname)
     case purpose
     when :resource
       return 3 * reward_factor
