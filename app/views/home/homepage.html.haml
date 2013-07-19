@@ -17,6 +17,17 @@
 %div.home
   %div.search_form= render "shared/search_form"
 
+  %div.leaderBoard
+    Leader Board
+    %ul{style: ''}
+      - @karma_leaders.each do |leader|
+        %li
+          = image_tag leader.image, alt: leader.name, size: '38x38'
+          = leader.name.camelcase
+          (
+          = leader.total_karma
+          )
+
   %div{style: 'float: left; width: 33%'}
     <script src="https://gist.github.com/abhishek77in/5890917.js"></script>
   %div{style: 'float: left; width: 33%; margin-left: 8px;'}
