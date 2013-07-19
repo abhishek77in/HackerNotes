@@ -4,6 +4,7 @@ class HomeController < ApplicationController
     @popular_repos = Repository.desc(:watchers_count).limit(15)
 
     @user_repo_names = user_repo_names
+    @karma_leaders = User.desc(:total_karma).limit(5)
   end
 
   private

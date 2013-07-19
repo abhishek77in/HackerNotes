@@ -22,6 +22,10 @@ class Repository
     delay.create_qnas
   end
 
+  def owner?(user_name)
+    owner == user_name
+  end
+
   embeds_many :tweeters
   embeds_many :subscription_services
   embeds_many :blogs

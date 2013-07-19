@@ -9,7 +9,19 @@
   %p
     Try
     = link_to "Hacker Notes Chrome Plugin.", "https://chrome.google.com/webstore/detail/hackernotes-plugin/acphikopigkpfbkonnacihkhcefdeagg"
-    It makes coming from Github to Hacker Notes super easy.
+    %br 
+      It makes coming from Github to Hacker Notes super easy.
+
+%div.leaderBoard
+  %div Leader Board
+  %ul
+    - @karma_leaders.each do |leader|
+      %li
+        = link_to image_tag(leader.image, alt: leader.name, size: '38x38'), "https://github.com/#{leader.nickname}"
+        = leader.name.camelcase
+        (
+        = leader.total_karma
+        )
 
 
 %div.home
