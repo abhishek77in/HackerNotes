@@ -3,7 +3,7 @@
     Welcome
     = current_user.name
     (
-    = link_to current_user.total_karma, user_profile_path(current_user.nickname)
+    = current_user.total_karma
     )
     = link_to "Sign out", signout_path, class: "btn-auth btn-github"
   - else

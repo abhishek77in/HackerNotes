@@ -14,5 +14,5 @@ Hackernotes::Application.routes.draw do
   get  ':owner/*name/*resource/*id', :to => 'notes#resource_iframe', :as => 'resource_iframe'
   get  ':owner/*name/*resource', :to => 'repositories#show_resources', :as => 'show_resources'
   get  ':owner/:name', :to => 'repositories#show', :as => 'show_repo'
-  get  ':username', :to => 'users#show', :as => 'user_profile'
+#  get  ':username', :to => 'users#show', :as => 'user_profile'
 end
