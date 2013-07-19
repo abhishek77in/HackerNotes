@@ -77,6 +77,8 @@ input_bg.gif: input_bg-80fd0b78d6be0a8eb7a9a42948de7acb.gif
 input_bg/index.gif: input_bg-80fd0b78d6be0a8eb7a9a42948de7acb.gif
 jquery.selectBox-arrow.gif: jquery.selectBox-arrow-bd2e5a8bc1d02f74d425a19999a31622.gif
 jquery/index.selectBox-arrow.gif: jquery.selectBox-arrow-bd2e5a8bc1d02f74d425a19999a31622.gif
+karma.png: karma-fef93b4560e84bdd034e6b7126e68da3.png
+karma/index.png: karma-fef93b4560e84bdd034e6b7126e68da3.png
 line_border.gif: line_border-0126cb96c3972e89bf68ecddc8c0af6f.gif
 line_border/index.gif: line_border-0126cb96c3972e89bf68ecddc8c0af6f.gif
 loader.gif: loader-7ec968aee576f76b14a7e9d754ec1b5a.gif
@@ -131,8 +133,8 @@ work_img.jpg: work_img-503a8c85d1cb942b6fd2e47f7c532d93.jpg
 work_img/index.jpg: work_img-503a8c85d1cb942b6fd2e47f7c532d93.jpg
 application.js: application-7c3af7c97a7be0b2b4aebee5c79c7601.js
 application/index.js: application-7c3af7c97a7be0b2b4aebee5c79c7601.js
-application.css: application-41a2cf0eceaddc0404060262205aa34c.css
-application/index.css: application-41a2cf0eceaddc0404060262205aa34c.css
+application.css: application-dedfadfbad89de75324bc839c81eebaa.css
+application/index.css: application-dedfadfbad89de75324bc839c81eebaa.css
 repo/repositories.css: repo/repositories-4f056a42ce1e984db6f39e34cb0dd814.css
 repo/repositories/index.css: repo/repositories-4f056a42ce1e984db6f39e34cb0dd814.css
 jquery.min.map: jquery.min-6c267bfd2b3f36e6edccb2e584934c1c.map
