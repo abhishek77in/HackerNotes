@@ -11,8 +11,8 @@ Hackernotes::Application.routes.draw do
   put '/vote' => 'votes#vote'
   delete '/remove' => 'remove#remove'
 
-  get  ':owner/*name/*resource/*id', :to => 'notes#resource_iframe', :as => 'resource_iframe'
-  get  ':owner/*name/*resource', :to => 'repositories#show_resources', :as => 'show_resources'
-  get  ':owner/:name', :to => 'repositories#show', :as => 'show_repo'
-#  get  ':username', :to => 'users#show', :as => 'user_profile'
+  get  ':owner/*name/*resource/*id', :to => 'notes#resource_iframe', :as => 'resource_iframe', :format => false
+  get  ':owner/*name/*resource', :to => 'repositories#show_resources', :as => 'show_resources', :format => false
+  get  ':owner/*name', :to => 'repositories#show', :as => 'show_repo', :format => false
+#  get  ':username', :to => 'users#show', :as => 'user_profile', :format => false
 end
