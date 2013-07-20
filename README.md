@@ -1,5 +1,4 @@
 # [Hacker Notes](http://www.thehackernotes.com)
-{{ An active README for Open Source projects on Github }}
 
 ## Setup
 Clone the repository  
