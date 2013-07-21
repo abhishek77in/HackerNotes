@@ -38,7 +38,7 @@ module Jimmy
   def create_slides
     return if self.watchers_count < MIN_WATCHERS_COUNT_SLIDES
     keyword = self.name.gsub(/_|-/,' ')
-    resources = SpeakerDeck.fetch(keyword)
+    resources = SpeakerDeck.fetch(keyword).first(5)
     add_to_db(resources, :slides)
   end
 
