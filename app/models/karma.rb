@@ -2,7 +2,7 @@ class Karma
   include Mongoid::Document
   include Mongoid::Timestamps
 
-  field :points, type: Integer
+  field :points, type: Integer, default: 0
   field :type # 'vote' or 'resource'
   field :repository_id
   field :resource_id
