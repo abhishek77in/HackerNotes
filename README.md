@@ -15,7 +15,8 @@ After doing this you should login using your Github account. (if you fail to thi
 If jimmy has not signed in (does not exist in DB), the data validation fails and no resource gets added to database.
 
 ## Contribution
-If you like the project and wish to improve it please send a mail to abhishek77in[at]gmail.com I will personally help you setup the project.
+If you like the project and wish to improve it please send a mail to abhishek77in[at]gmail.com I will personally help you setup the project.  
+My [presentation](http://prezi.com/uvj4u2y0k1zg/how-i-built-hacker-notes/) about how I build Hacker Notes at BRUG (Bangalore Ruby User Group) dated 20-Jul-2013, this should give you a basic idea about its architecture and several other things.
 
 
 ## Credits
