@@ -16,7 +16,7 @@ If jimmy has not signed in (does not exist in DB), the data validation fails and
 
 ## Contribution
 If you like the project and wish to improve it please send a mail to abhishek77in[at]gmail.com I will personally help you setup the project.  
-My [presentation](http://prezi.com/uvj4u2y0k1zg/how-i-built-hacker-notes/) about how I build Hacker Notes at BRUG (Bangalore Ruby User Group) dated 20-Jul-2013, this should give you a basic idea about its architecture and several other things.
+My [presentation](http://prezi.com/uvj4u2y0k1zg/how-i-built-hacker-notes/) about how I built Hacker Notes at BRUG (Bangalore Ruby User Group) dated 20-Jul-2013, this should give you a basic idea about its architecture and several other things.
 
 
 ## Credits
