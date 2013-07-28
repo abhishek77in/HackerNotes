@@ -3,10 +3,10 @@ class Repository
   include Mongoid::Timestamps
 
   include Jimmy
-  field :name, type: String
-  field :owner, type: String
-  field :full_name, type: String
-  field :description, type: String
+  field :name
+  field :owner
+  field :full_name
+  field :description
   field :watchers_count, type: Integer
   field :forks_count, type: Integer
 

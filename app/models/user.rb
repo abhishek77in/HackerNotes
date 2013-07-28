@@ -3,10 +3,10 @@ class User
   include Mongoid::Timestamps
   include GithubInteraction
 
-  field :uid, type: String
-  field :name, type: String
-  field :nickname, type: String
-  field :image, type: String
+  field :uid
+  field :name
+  field :nickname
+  field :image
   field :total_karma, type: Integer, default: 0
 
   attr_accessible :uid, :name, :nickname, :image, :total_karma

@@ -7,16 +7,16 @@ module Plug
     include Mongoid::Timestamps
     include Vote
 
-    field :title, type: String
-    field :description, type: String
-    field :url, type: String
-    field :html, type: String
-    field :height, type: String
-    field :width, type: String
+    field :title
+    field :description
+    field :url
+    field :html
+    field :height
+    field :width
 
-    field :thumbnail_url, type: String
-    field :thumbnail_height, type: String
-    field :thumbnail_width, type: String
+    field :thumbnail_url
+    field :thumbnail_height
+    field :thumbnail_width
 
     field :votes, type: Hash, default: -> { Hash.new }
     field :votes_counter, type: Integer, default: 0
