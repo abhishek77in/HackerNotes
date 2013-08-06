@@ -1,9 +1,0 @@
-%h4.title Your Respositories
-- if current_user.present?
-  %ul
-    - @user_repo_names.each do |name|
-      %li= link_to name, show_repo_path(owner: current_user.nickname, name: name)
-- else
-  %p
-    = link_to "Sign in with Github", "/auth/github"
-    to see your repositories.
