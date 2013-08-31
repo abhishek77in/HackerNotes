@@ -15,6 +15,7 @@ function showSelectBox() {
 }
 
 function slider () {
+  $('nav ul li').first().addClass('active');
   $('nav ul li a').click(function() {
     $('nav ul li').removeClass('active');
     $(this).parent().addClass('active');
