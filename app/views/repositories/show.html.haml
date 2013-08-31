@@ -6,7 +6,7 @@
 - content_for :sidebar do
   = render "sidebar", repo: @repo
 
-%a{href: "http://github.com/#{@repo.owner}/#{@repo.name}"}
+%a{href: "http://github.com/#{@repo.owner}/#{@repo.name}", target: "#{@repo.owner}/#{@repo.name}"}
   %h2.github-repo-name= @repo.name.capitalize
 %p= @repo.description
 
