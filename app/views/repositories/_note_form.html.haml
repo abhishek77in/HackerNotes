@@ -12,7 +12,7 @@
             'Noteworthy' => 'noteworthies' }
 
 %h3
-  %label{for: 'url'} Add a note
+  %label{for: 'url'} Share a link
 = form_tag(create_note_path, method: 'post') do
   = success_message
   = text_field_tag 'url', @note.try(:url), placeholder: 'Enter Resource URL', required: true
