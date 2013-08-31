@@ -10,9 +10,9 @@
  *
  *= require_self
  *= require_directory .
- *= require_tree ./home
- *= require_directory ../../../vendor/assets/stylesheets/
  *= require jquery.selectbox
+ *= require fancybox
+ *= require_tree ./home
  */
 .superscript {
   position: relative;

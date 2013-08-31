@@ -15,6 +15,7 @@ gem 'delayed_job_mongoid'
 gem "newrelic_rpm", "~> 3.6.5.130"
 
 gem 'jquery-selectbox'
+gem 'fancybox2-rails', '~> 0.2.4'
 
 group :development do
   gem "better_errors", "~> 0.7.2"
