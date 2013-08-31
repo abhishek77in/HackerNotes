@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require_directory ../../../vendor/assets/javascripts/
 //= require_tree .
+//= require jquery.selectbox
 
 $(document).ready(function() {
   $(".fancybox").fancybox();

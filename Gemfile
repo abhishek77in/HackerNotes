@@ -14,6 +14,8 @@ gem "kaminari", "~> 0.14.1"
 gem 'delayed_job_mongoid'
 gem "newrelic_rpm", "~> 3.6.5.130"
 
+gem 'jquery-selectbox'
+
 group :development do
   gem "better_errors", "~> 0.7.2"
   gem "binding_of_caller", "~> 0.7.1"

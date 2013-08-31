@@ -12,8 +12,8 @@
  *= require_directory .
  *= require_tree ./home
  *= require_directory ../../../vendor/assets/stylesheets/
+ *= require jquery.selectbox
  */
-
 .superscript {
   position: relative;
   top: -2em;
