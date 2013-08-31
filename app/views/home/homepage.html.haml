@@ -27,7 +27,6 @@
 
 
 %div.home
-  %div.search_form= render "shared/search_form"
 
   %div{style: 'float: left; width: 33%'}
     <script src="https://gist.github.com/abhishek77in/5890917.js"></script>
@@ -43,8 +42,7 @@
       - @repos.each do |r|
         %li= link_to r.name, show_repo_path(owner: r.owner, name: r.name)
 
-  %div{style: 'clear: left'}
-    <script src="https://gist.github.com/abhishek77in/5516844.js"></script>
+  %div.search_form{style: 'clear: left; text-align: center'}= render "shared/search_form"
 
   %div{style: 'text-align: center'}
     %h4.title Supported by
