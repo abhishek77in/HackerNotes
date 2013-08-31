@@ -7,7 +7,7 @@
     )
     = link_to "Sign out", signout_path, class: "btn-auth btn-github"
   - else
-    = link_to "Sign in with Github", "/auth/github", class: "btn-auth btn-github"
+    = link_to "Sign in with <b>Github</b>".html_safe, "/auth/github", class: "btn-auth btn-github"
 
   %br
   %div.tweet
