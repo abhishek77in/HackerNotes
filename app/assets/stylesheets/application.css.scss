@@ -106,7 +106,6 @@ section a h2:hover, .github-repo-name:hover {
   }
 }
 
-
 .resource {
   h3.title {
     font-family:"LaneNarrowRegular", Arial, Helvetica, sans-serif;
@@ -127,6 +126,9 @@ section a h2:hover, .github-repo-name:hover {
   }
   .vote img{
     height: 25px;
+  }
+  .voteContainer {
+    position: absolute;
   }
 }
 
