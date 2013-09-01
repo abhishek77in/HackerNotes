@@ -25,6 +25,6 @@
         = repo.name
     %ul
       - titles.each do |n|
-        %li{class: n[:css_class]}
+        %li
           = link_to(n[:title], n[:anchor])
     %div.bg_bottom
