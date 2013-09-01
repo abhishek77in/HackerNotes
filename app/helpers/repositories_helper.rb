@@ -50,9 +50,9 @@ module RepositoriesHelper
     "#{repo.description}<br/>Created by: <b>#{repo.owner}</b>".html_safe
   end
 
-  def sidebar(resources, title, anchor = nil)
+  def sidebar(resources, title)
     return nil if resources.empty?
-    anchor ||= resources.first.model_name.downcase.pluralize
+    anchor = resources.first.model_name.underscore.pluralize
     { anchor: "##{anchor}", title: title }
   end
 
