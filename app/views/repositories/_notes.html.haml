@@ -10,12 +10,14 @@
 - if @tweeters.present?
   %section#tweeters.clearfix
     - @tweeters.each do |t|
+      - next if t.thumbnail_url.blank?
       = link_to(image_tag(t.thumbnail_url, alt: t.title), t.url)
     %hr
 
 - if @books.present?
   %section#books.clearfix
     - @books.each do |b|
+      - next if b.thumbnail_url.blank?
       = link_to(image_tag(b.thumbnail_url, alt: b.title), b.url)
     %hr
 
