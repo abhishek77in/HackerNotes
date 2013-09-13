@@ -2,8 +2,8 @@ source 'https://rubygems.org'
 ruby "1.9.3"
 
 gem 'rails', '3.2.12'
+gem 'unicorn'
 gem 'mongoid', '~> 3.1.4'
-gem "thin", "~> 1.5.0"
 gem "github_api", "~> 0.9"
 gem "omniauth-github", "~> 1.1.0"
 gem "mechanize", "~> 2.5.1"
