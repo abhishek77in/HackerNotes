@@ -17,7 +17,7 @@ class Repository
   def create_from_service
     delay.create_blogs
     delay.create_slides
-    delay.create_tweeters
+    # delay.create_tweeters
     delay.create_noteworthies
     delay.create_qnas
   end
