@@ -6,6 +6,7 @@
 
 = render "news"
 = render "leader_board"
+= render "repo_logos"
 
 %div.home
 
@@ -23,9 +24,14 @@
       - @repos.each do |r|
         %li= link_to r.name, show_repo_path(owner: r.owner, name: r.name)
 
-  %div.search_form{style: 'clear: left; text-align: center'}= render "shared/search_form"
+  %div.search_form= render "shared/search_form"
 
-  %div{style: 'text-align: center'}
+  %div.tweetbox
+    %p
+      <b>Some love from the community!</b>
+      <blockquote class="twitter-tweet"><p>A pretty sweet collection of sails info lives here:&#10;<a href="http://t.co/qDi2fzSnJZ">http://t.co/qDi2fzSnJZ</a></p>&mdash; Balderdash (@balderdashy) <a href="https://twitter.com/balderdashy/statuses/355063952352354304">July 10, 2013</a></blockquote>
+
+  %div.sponsor
     %h4.title Sponsored by
     = link_to image_tag("mavenhive-logo.gif", width: "100", alt: "mavenhive logo"), "http://mavenhive.in"
 
@@ -37,3 +43,4 @@
       , 2013 /
       Built by:
       = link_to '@abhishek77in', 'https://twitter.com/abhishek77in'
+
