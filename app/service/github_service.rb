@@ -16,7 +16,7 @@ class GithubService
   end
 
   def create(owner, name)
-    g_repo = Github.new.repos.get(owner, name)
+    g_repo = Github.new(basic_auth: "#{ENV['GITHUB_LOGIN']}:#{ENV['GITHUB_PASSWORD']}").repos.get(owner, name)
     Repository.create to_hackernotes(g_repo)
   end
 
