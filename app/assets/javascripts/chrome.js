@@ -12,7 +12,7 @@ if((navigator.userAgent.toLowerCase().indexOf('chrome') > -1) && (localStorage[t
 }
 
 function showToolbar() {
-  $('#ext_toolbar').css({backgroundImage: "url('assets/gradient.png')", fontFamily: 'Tahoma, sans-serif', fontSize: '14px', color: '#333', borderBottom: '1px solid #CCC', height: "37px"});
+  $('#ext_toolbar').css({backgroundImage: "url('assets/gradient.png')", fontFamily: 'Tahoma, sans-serif', fontSize: '14px', color: '#333', borderBottom: '1px solid #CCC', height: "37px", zIndex: 1000});
   $('#ext_toolbar').append("<div id=\"ext_toolbar_close\"><span style=\"display:none;\">Close</span></div>");
   $('#ext_toolbar').append("<div id=\"ext_toolbar_install\"><span style=\"display:none;\">Install</span></div>");
   $('#ext_toolbar').append("<div id=\"ext_toolbar_text\">"+toolbarConfig.title+" has a <span id=\"ext_toolbar_link\">Google Chrome Extension</span>. It makes coming from Github to Hacker Notes super easy.</div>");
