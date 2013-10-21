@@ -14,6 +14,9 @@ gem "kaminari", "~> 0.14.1"
 gem 'delayed_job_mongoid'
 gem "newrelic_rpm", "~> 3.6.5.130"
 
+gem 'capistrano'
+gem 'rvm-capistrano'
+
 gem 'jquery-selectbox'
 gem 'fancybox2-rails', '~> 0.2.4'
 
