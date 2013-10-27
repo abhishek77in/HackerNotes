@@ -15,7 +15,8 @@ module Jimmy
 
   def create_videos
     return if self.watchers_count < MIN_WATCHERS_COUNT_VIDEOS
-    keyword = self.name.to_a + self.description.split(' ').take(4)
+    keyword = self.name.to_a
+    keyword = keyword + self.description.split(' ').take(4) if self.description.present?
     keyword = keyword.join(' ')
     resources = GoogleVideo.fetch(keyword).first(5)
     add_to_db(resources, :videos)
@@ -29,7 +30,8 @@ module Jimmy
 
   def create_noteworthies
     return if self.watchers_count < MIN_WATCHERS_COUNT_NOTEWORTHY
-    keyword = self.name.to_a + self.description.split(' ').take(8)
+    keyword = self.name.to_a
+    keyword = keyword + self.description.split(' ').take(8) if self.description.present?
     keyword = keyword.join(' ')
     resources = GoogleWeb.fetch(keyword).first(10)
     add_to_db(resources, :noteworthies)
@@ -44,7 +46,8 @@ module Jimmy
 
   def create_blogs
     return if self.watchers_count < MIN_WATCHERS_COUNT_BLOGS
-    keyword = self.name.to_a + self.description.split(' ').take(8)
+    keyword = self.name.to_a
+    keyword = keyword + self.description.split(' ').take(8) if self.description.present?
     keyword = keyword.join(' ')
     resources = GoogleBlog.fetch(keyword).first(10)
     add_to_db(resources, :blogs)
