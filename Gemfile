@@ -12,6 +12,7 @@ gem "embedly", "~> 1.5.6"
 gem "haml", "~> 4.0.1"
 gem "kaminari", "~> 0.14.1"
 gem 'delayed_job_mongoid'
+gem 'daemons'
 gem "newrelic_rpm", "~> 3.6.5.130"
 
 gem 'capistrano'
