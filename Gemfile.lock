@@ -132,7 +132,6 @@ GEM
     net-ssh (2.7.0)
     net-ssh-gateway (1.2.0)
       net-ssh (>= 2.6.5)
-    newrelic_rpm (3.6.5.130)
     nokogiri (1.5.6)
     ntlm-http (0.1.1)
     oauth (0.4.7)
@@ -232,7 +231,6 @@ DEPENDENCIES
   kaminari (~> 0.14.1)
   mechanize (~> 2.5.1)
   mongoid (~> 3.1.4)
-  newrelic_rpm (~> 3.6.5.130)
   omniauth-github (~> 1.1.0)
   rails (= 3.2.12)
   rvm-capistrano
