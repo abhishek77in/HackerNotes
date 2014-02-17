@@ -7,9 +7,13 @@ namespace :adhoc do
       repository.tweeters.each do |tweeter|
         username = tweeter.url.split('/').last
         puts username
-        tweeter.thumbnail_url = client.user(username).profile_image_url.to_s
         puts tweeter.thumbnail_url
-        tweeter.save
+        begin
+          tweeter.thumbnail_url = client.user(username).profile_image_url.to_s
+          tweeter.save
+        rescue Exception => e
+          puts e.message
+        end
         puts tweeter.thumbnail_url
       end
     end
