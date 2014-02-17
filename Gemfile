@@ -5,9 +5,10 @@ gem 'rails', '3.2.12'
 gem 'unicorn'
 gem 'mongoid', '~> 3.1.4'
 gem "github_api", "~> 0.9"
+gem "twitter"
 gem "omniauth-github", "~> 1.1.0"
 gem "mechanize", "~> 2.5.1"
-gem "google-search", "~> 1.0.3"
+gem "google-search"
 gem "embedly", "~> 1.5.6"
 gem "haml", "~> 4.0.1"
 gem "kaminari", "~> 0.14.1"
