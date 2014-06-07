@@ -1,7 +1,7 @@
 require "bundler/capistrano"
 require "rvm/capistrano"
 
-server "107.170.41.244", :web, :app, :db, primary: true
+server "107.170.41.244", :web, :app, primary: true
 
 set :application, "HackerNotes"
 set :user, "abhishek"
