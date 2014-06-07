@@ -1,11 +1,11 @@
 require "bundler/capistrano"
 require "rvm/capistrano"
 
-server "54.200.200.221", :web, :app, :db, primary: true
+server "107.170.41.244", :web, :app, :db, primary: true
 
 set :application, "HackerNotes"
-set :user, "ubuntu"
-set :port, 22
+set :user, "abhishek"
+set :port, 4859
 set :deploy_to, "/home/#{user}/apps/#{application}"
 set :deploy_via, :remote_cache
 set :use_sudo, false
@@ -17,8 +17,6 @@ set :branch, "master"
 
 default_run_options[:pty] = true
 ssh_options[:forward_agent] = true
-ssh_options[:auth_methods] = ["publickey"]
-ssh_options[:keys] = ["/home/abhishek/.ssh/ubuntu.pem"]
 
 after "deploy", "deploy:cleanup" # keep only the last 5 releases
 
