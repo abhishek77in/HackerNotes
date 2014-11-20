@@ -33,4 +33,3 @@ group :assets do
 end
 
 gem 'jquery-rails'
-gem 'rails_12factor'
