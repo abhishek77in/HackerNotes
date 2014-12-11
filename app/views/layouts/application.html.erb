@@ -4,6 +4,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta name="Description" content="<%= yield(:page_description) %>">
   <meta name="Keyword" content="<%= yield(:page_keywords) %>">
+  <meta name="twitter:widgets:csp" content="on">
   <%= favicon_link_tag "favicon.ico" %>
 
   <title><%= [yield(:page_title), "Hacker Notes"].reject(&:blank?).join(' - ') %></title>
