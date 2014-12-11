@@ -1,4 +1,4 @@
-# [Hacker Notes](http://www.thehackernotes.com)
+# [Hacker Notes](http://www.hackernotes.org)
 
 ## Setup
 Clone the repository  
