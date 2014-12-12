@@ -1,2 +1,15 @@
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=<%= ENV['ADDTHIS_PUBID'] %>" async="async"></script>
+
+<script type="text/javascript">
+  var addthis_share = {
+    url_transforms : {
+      shorten : {
+        twitter : 'bitly'
+      }
+    },
+    shorteners : {
+      bitly : {}
+    }
+  }
+</script>
