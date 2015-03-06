@@ -8,9 +8,11 @@ namespace :adhoc do
         username = tweeter.url.split('/').last
         puts username
         puts tweeter.thumbnail_url
+        thumbnail_url = tweeter.thumbnail_url
         begin
           tweeter.thumbnail_url = client.user(username).profile_image_url.to_s
-          tweeter.save
+          sleep(0.5)
+          tweeter.save! unless thumbnail_url == tweeter.thumbnail_url
         rescue Exception => e
           puts e.message
         end
