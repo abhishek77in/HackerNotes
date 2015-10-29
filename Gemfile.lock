@@ -38,12 +38,6 @@ GEM
       debug_inspector (>= 0.0.1)
     buftok (0.2.0)
     builder (3.0.4)
-    capistrano (2.15.5)
-      highline
-      net-scp (>= 1.0.0)
-      net-sftp (>= 2.0.0)
-      net-ssh (>= 2.0.14)
-      net-ssh-gateway (>= 1.1.0)
     coderay (1.0.9)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
@@ -90,7 +84,6 @@ GEM
     haml (4.0.1)
       tilt
     hashie (1.2.0)
-    highline (1.6.19)
     hike (1.2.1)
     http (0.5.0)
       http_parser.rb
@@ -135,13 +128,6 @@ GEM
     multipart-post (1.2.0)
     net-http-digest_auth (1.2.1)
     net-http-persistent (2.8)
-    net-scp (1.1.2)
-      net-ssh (>= 2.6.5)
-    net-sftp (2.1.2)
-      net-ssh (>= 2.6.5)
-    net-ssh (2.7.0)
-    net-ssh-gateway (1.2.0)
-      net-ssh (>= 2.6.5)
     nokogiri (1.5.6)
     ntlm-http (0.1.1)
     oauth (0.4.7)
@@ -194,8 +180,6 @@ GEM
     rake (10.0.3)
     rdoc (3.12.2)
       json (~> 1.4)
-    rvm-capistrano (1.4.1)
-      capistrano (>= 2.0.0)
     sass (3.2.6)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
@@ -246,7 +230,6 @@ PLATFORMS
 DEPENDENCIES
   better_errors (~> 0.7.2)
   binding_of_caller (~> 0.7.1)
-  capistrano
   coffee-rails (~> 3.2.1)
   daemons
   delayed_job_mongoid
@@ -263,8 +246,10 @@ DEPENDENCIES
   omniauth-github (~> 1.1.0)
   rails (= 3.2.12)
   rails_12factor
-  rvm-capistrano
   sass-rails (~> 3.2.3)
   twitter
   uglifier (>= 1.0.3)
   unicorn
+
+BUNDLED WITH
+   1.10.6
